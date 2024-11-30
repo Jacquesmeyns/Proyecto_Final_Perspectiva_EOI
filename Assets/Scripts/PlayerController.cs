@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     #region PhysicsVariables
     private Rigidbody rb;
     public Rigidbody Rb => rb;
-    private Vector3 gyroUp => -GravityController.gravity.normalized;
+    private Vector3 gyroUp => -GravityController.Gravity.normalized;
     #endregion
     
 
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(GravityController.gravity * rb.mass);
+        rb.AddForce(GravityController.Gravity * rb.mass);
         rb.AddForce(moveDirection * Speed);
     }
 
@@ -88,10 +88,11 @@ public class PlayerController : MonoBehaviour
     private void ChangeGravity()
     {
         if(gameManager.currentGravityChanger.isPlayerInside)
-            if (gameManager.currentGravityChanger.transform.localEulerAngles.x == 270)
-                gameManager.EnableGravityOnY();
-            else
-                gameManager.EnableGravityOnZ();
+            gameManager.ChangeToNewGravity();
+            // if (gameManager.currentGravityChanger.transform.localEulerAngles.x == 270)
+            //     gameManager.EnableGravityOnY();
+            // else
+            //     gameManager.EnableGravityOnZ();
     }
 
     private void OnEnable()

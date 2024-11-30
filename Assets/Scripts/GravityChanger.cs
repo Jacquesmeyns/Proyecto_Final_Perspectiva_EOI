@@ -10,11 +10,12 @@ public class GravityChanger : MonoBehaviour
     [SerializeField] GameManager gameManager;
     [SerializeField] GameObject iconGO;
     [SerializeField] public Transform nextSpawn;
+    [SerializeField] public Transform nextCameraOrientation;
     [SerializeField] public Mesh gizmoMesh;
 
     public bool isPlayerInside;
-    
-    
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,6 +44,11 @@ public class GravityChanger : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        var defaultColor = Gizmos.color;
+        Gizmos.color = Color.green;
         Gizmos.DrawMesh(gizmoMesh, nextSpawn.position, nextSpawn.rotation, Vector3.one);
+        Gizmos.color = defaultColor;
+        Gizmos.DrawSphere(nextCameraOrientation.position, 0.2f);
+        Gizmos.DrawLine(nextCameraOrientation.position, nextSpawn.position);
     }
 }
