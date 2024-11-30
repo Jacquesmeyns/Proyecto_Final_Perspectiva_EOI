@@ -10,6 +10,7 @@ public class GravityChanger : MonoBehaviour
     [SerializeField] GameManager gameManager;
     [SerializeField] GameObject iconGO;
     [SerializeField] public Transform nextSpawn;
+    [SerializeField] public Mesh gizmoMesh;
 
     public bool isPlayerInside;
     
@@ -38,5 +39,10 @@ public class GravityChanger : MonoBehaviour
         {
             isPlayerInside = false;
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawMesh(gizmoMesh, nextSpawn.position, nextSpawn.rotation, Vector3.one);
     }
 }

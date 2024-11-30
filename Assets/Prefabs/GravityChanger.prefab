@@ -210,4 +210,5 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   iconGO: {fileID: 708572357745016765}
   nextSpawn: {fileID: 2034998882919071630}
+  gizmoMesh: {fileID: -236007797189776682, guid: 49bfb0b41969dbf44938c65e3c54e25d, type: 3}
   isPlayerInside: 0
