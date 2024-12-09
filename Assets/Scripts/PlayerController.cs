@@ -35,12 +35,47 @@ public class PlayerController : MonoBehaviour
     public int HealthPoints => healthPoints;
 
     #endregion
-    
+
+    #region Material
+
+    private Material playerMaterial;
+    [SerializeField] private float colorChangeTime = 2;
+
+    #endregion
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        playerMaterial = GetComponent<Renderer>().material;
     }
+
+    [ContextMenu("Change player color - Red")]
+    public void ChangePlayerMaterialRed()
+    {
+        DOVirtual.Color(playerMaterial.color, Color.red, colorChangeTime, (value) =>
+        {
+            playerMaterial.color = value;
+        });
+    }
+    
+    [ContextMenu("Change player color - Orange")]
+    public void ChangePlayerMaterialOrange()
+    {
+        DOVirtual.Color(playerMaterial.color, new Color(1f, 0.5f, 0f), colorChangeTime, (value) =>
+        {
+            playerMaterial.color = value;
+        });
+    }
+    
+    [ContextMenu("Change player color - Blue")]
+    public void ChangePlayerMaterialBlue()
+    {
+        DOVirtual.Color(playerMaterial.color, Color.blue, colorChangeTime, (value) =>
+        {
+            playerMaterial.color = value;
+        });
+    }
+    
 
     private void Update()
     {

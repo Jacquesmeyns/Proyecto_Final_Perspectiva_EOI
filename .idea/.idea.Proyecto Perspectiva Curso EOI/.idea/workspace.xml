@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="">
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="Level 1 created, not finished.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,11 +29,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Prefabs/GravityChanger.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scenes/LevelTesting.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GravityController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -110,7 +104,7 @@
       <updated>1732965791004</updated>
       <workItem from="1732965793402" duration="18303000" />
       <workItem from="1733129136293" duration="611000" />
-      <workItem from="1733746678112" duration="1401000" />
+      <workItem from="1733746678112" duration="2946000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore commit">
       <option name="closed" value="true" />
@@ -144,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732997645684</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Level 1 created, not finished.">
+      <option name="closed" value="true" />
+      <created>1733754919706</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733754919706</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +192,8 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="Debug arrow gizmo added to GravityChanger.cs" />
     <MESSAGE value="- Arrow model added&#10;- DrawGizmo on GravityChanger.prefab children added&#10;- Mobile Wall.prefab created&#10;- Made flippable constraints when gravity doesnt change but camera angle does. To be tweaked.&#10;- Tweaked CameraController.cs distanceOffset and NearClipPlane values. To be tweaked and tested even more.&#10;- GravityController.cs now has only one generic method.&#10;- Created Auxiliar.cs class for auxiliar static methods." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Arrow model added&#10;- DrawGizmo on GravityChanger.prefab children added&#10;- Mobile Wall.prefab created&#10;- Made flippable constraints when gravity doesnt change but camera angle does. To be tweaked.&#10;- Tweaked CameraController.cs distanceOffset and NearClipPlane values. To be tweaked and tested even more.&#10;- GravityController.cs now has only one generic method.&#10;- Created Auxiliar.cs class for auxiliar static methods." />
+    <MESSAGE value="Level 1 created, not finished." />
+    <option name="LAST_COMMIT_MESSAGE" value="Level 1 created, not finished." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
