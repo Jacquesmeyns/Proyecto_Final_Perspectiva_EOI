@@ -11,32 +11,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] Vector3 sideCameraPosition;
     [SerializeField] Vector3 topCameraPosition;
     public GravityChanger currentGravityChanger;
-    
-    /*[ContextMenu("Change gravity to X")]
-    private void EnableGravityOnX()
+    public CheckpointController currentCheckpoint;
+
+    private void Awake()
     {
-        GravityController.ChangeGravityToX();
-        
-    }*/
-    
-    // [ContextMenu("Change gravity to Y")]
-    // public void EnableGravityOnY()
-    // {
-    //     
-    //     GravityController.ChangeGravityToY();
-    //     player.Rb.constraints = RigidbodyConstraints.FreezePositionZ;
-    //     player.teleport(currentGravityChanger.nextSpawn.position);
-    //     cameraController.changeDirection(Vector3.forward);
-    // }
-    //
-    // [ContextMenu("Change gravity to Z")]
-    // public void EnableGravityOnZ()
-    // {
-    //     GravityController.ChangeGravityToZ();
-    //     player.Rb.constraints = RigidbodyConstraints.FreezePositionY;
-    //     player.teleport(currentGravityChanger.nextSpawn.position);
-    //     cameraController.changeDirection(Vector3.down);
-    // }
+        if(currentCheckpoint == null)
+            throw new Exception("No first checkpoint setted. Please assign one for the player Spawn point.");
+        player.transform.position = currentCheckpoint.SpawnPosition;
+    }
 
     public void ChangeToNewGravity()
     {

@@ -5,6 +5,7 @@ public class CheckpointController : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
     [SerializeField] private Transform spawnPosition;
+    public Vector3 SpawnPosition => spawnPosition.position;
     [SerializeField] private CheckpointController nextCheckpoint;
     public Vector3 nextSpawnPosition => nextCheckpoint.spawnPosition.position;
     
@@ -13,7 +14,7 @@ public class CheckpointController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //gameManager.currentGravityChanger = this;
+            gameManager.currentCheckpoint = this;
         }
     }
 }

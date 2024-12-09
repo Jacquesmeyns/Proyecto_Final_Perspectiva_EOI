@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         playerMaterial = GetComponent<Renderer>().material;
+        healthPoints = MaxHealth;
     }
 
     [ContextMenu("Change player color - Red")]
@@ -159,13 +160,6 @@ public class PlayerController : MonoBehaviour
     public void LoseHealth()
     {
         healthPoints--;
-        if (healthPoints > 0)
-        {
-            //TODO "Death" reset to last checkPoint
-        }
-        else{
-            //TODO Lose POPUP Screen
-        }
     }
 
     public void GainHealth()
@@ -178,5 +172,35 @@ public class PlayerController : MonoBehaviour
     public void ResetHealthPoints()
     {
         healthPoints = MaxHealth;
+    }
+
+    public void UpdateHealthStatus()
+    {
+        if (healthPoints > 0)
+        {
+            switch (healthPoints)
+            {
+                case 1:
+                    ChangePlayerMaterialRed();
+                    break;
+                case 2:
+                    ChangePlayerMaterialOrange();
+                    break;
+                case 3:
+                    ChangePlayerMaterialBlue();
+                    break;
+            }
+            //TODO "Death" reset to last checkPoint
+        }
+        else{
+            //TODO Lose POPUP Screen
+        }
+    }
+
+    public void TakeDamage()
+    {
+        LoseHealth();
+        UpdateHealthStatus();
+        Teleport(gameManager.currentCheckpoint.SpawnPosition);
     }
 }
