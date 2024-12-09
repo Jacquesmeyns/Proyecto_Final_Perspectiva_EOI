@@ -19,7 +19,7 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        vcam.Lens.NearClipPlane = -5;
+        vcam.Lens.NearClipPlane = -15;
         target = vcam.Target.TrackingTarget;
         currentOffset = target.position + Vector3.back * distanceOffset;
         currentDirection = transform.forward;

@@ -27,13 +27,19 @@ public class PlayerController : MonoBehaviour
     public Rigidbody Rb => rb;
     private Vector3 gyroUp => -GravityController.Gravity.normalized;
     #endregion
+
+    #region HealthSystem
+
+    private const int MaxHealth = 3;
+    private int healthPoints;
+    public int HealthPoints => healthPoints;
+
+    #endregion
     
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        
-        
     }
 
     private void Update()
@@ -109,9 +115,33 @@ public class PlayerController : MonoBehaviour
         interactAction.action.started -= ctx => ChangeGravity();
     }
 
-    public void teleport(Vector3 position)
+    public void Teleport(Vector3 position)
     {
         transform.DOMove(position, 1f)
             .SetEase(Ease.InOutCubic);
+    }
+
+    public void LoseHealth()
+    {
+        healthPoints--;
+        if (healthPoints > 0)
+        {
+            //TODO "Death" reset to last checkPoint
+        }
+        else{
+            //TODO Lose POPUP Screen
+        }
+    }
+
+    public void GainHealth()
+    {
+        if (healthPoints == MaxHealth)
+            return;
+        healthPoints++;
+    }
+
+    public void ResetHealthPoints()
+    {
+        healthPoints = MaxHealth;
     }
 }
