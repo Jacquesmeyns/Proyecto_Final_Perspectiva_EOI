@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   spawnPosition: {fileID: 2543220358987329065}
+  nextCheckpoint: {fileID: 0}
 --- !u!1 &2583921458448522556
 GameObject:
   m_ObjectHideFlags: 0
