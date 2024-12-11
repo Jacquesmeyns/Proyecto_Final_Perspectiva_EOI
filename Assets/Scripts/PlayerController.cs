@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
+    public GameManager GameManager => gameManager;
     #region InputSystem
     public InputActionReference moveAction;
     public InputActionReference jumpAction;

@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GravityChanger currentGravityChanger;
     public CheckpointController currentCheckpoint;
 
+    private float totalScore = 0 ;
     private void Awake()
     {
         if(currentCheckpoint == null)
@@ -86,5 +87,10 @@ public class GameManager : MonoBehaviour
             else
                 throw new Exception("The nextSpawn rotation is not suitable for an isometric view.");
         }
+    }
+
+    public void UpdateScore(int value)
+    {
+        totalScore += value;
     }
 }
