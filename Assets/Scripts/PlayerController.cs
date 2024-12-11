@@ -51,7 +51,6 @@ public class PlayerController : MonoBehaviour
         healthPoints = MaxHealth;
     }
 
-    [ContextMenu("Change player color - Red")]
     public void ChangePlayerMaterialRed()
     {
         DOVirtual.Color(playerMaterial.color, Color.red, colorChangeTime, (value) =>
@@ -60,7 +59,6 @@ public class PlayerController : MonoBehaviour
         });
     }
     
-    [ContextMenu("Change player color - Orange")]
     public void ChangePlayerMaterialOrange()
     {
         DOVirtual.Color(playerMaterial.color, new Color(1f, 0.5f, 0f), colorChangeTime, (value) =>
@@ -69,7 +67,6 @@ public class PlayerController : MonoBehaviour
         });
     }
     
-    [ContextMenu("Change player color - Blue")]
     public void ChangePlayerMaterialBlue()
     {
         DOVirtual.Color(playerMaterial.color, Color.blue, colorChangeTime, (value) =>
@@ -130,6 +127,11 @@ public class PlayerController : MonoBehaviour
     
     private void ChangeGravity()
     {
+        if (!gameManager.currentGravityChanger.Active)
+        {
+            //tween inactivo además de tener un color distinto
+            return;
+        }
         if(gameManager.currentGravityChanger.isPlayerInside)
             gameManager.ChangeToNewGravity();
             // if (gameManager.currentGravityChanger.transform.localEulerAngles.x == 270)
