@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection;
     private bool jumpCharged = false;
     private float allowedDistanceToJump = 0.3f;
+    private float minJumpPercent = 0.33f;
     #endregion
     
     #region PhysicsVariables
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
     private Material playerMaterial;
     [SerializeField] private float colorChangeTime = 2;
+    
 
     #endregion
 
@@ -95,8 +97,8 @@ public class PlayerController : MonoBehaviour
 
     private void ChargeJump()
     {
-        Debug.DrawRay(transform.position, Vector3.down * (sphereCollider.radius + allowedDistanceToJump), Color.red );
-        Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit,
+        Debug.DrawRay(transform.position, GravityController.Gravity.normalized * (sphereCollider.radius + allowedDistanceToJump), Color.red );
+        Physics.Raycast(transform.position, GravityController.Gravity.normalized, out RaycastHit hit,
             sphereCollider.radius + allowedDistanceToJump, LayerMask.GetMask("Ground"));
         if (hit.collider == null)
             return;
@@ -136,7 +138,7 @@ public class PlayerController : MonoBehaviour
         }
         if (currentTimeDown >= maxJumpKeyDownTime)
             currentTimeDown = maxJumpKeyDownTime;
-        float jumpForce = Mathf.Lerp(maxJumpForce*0.2f, maxJumpForce, currentTimeDown / maxJumpKeyDownTime);
+        float jumpForce = Mathf.Lerp(maxJumpForce*minJumpPercent, maxJumpForce, currentTimeDown / maxJumpKeyDownTime);
         rb.AddForce( gyroUp * jumpForce, ForceMode.Impulse);
         currentTimeDown = 0;
     }

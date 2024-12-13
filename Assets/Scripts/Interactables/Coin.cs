@@ -10,7 +10,7 @@ public class Coin : MonoBehaviour
     AudioSource audio;
     void Start()
     {
-        Tween tweenRotation = transform.DOLocalRotate(new Vector3(0f, transform.rotation.y+180, 0f), 2f, RotateMode.WorldAxisAdd)
+        Tween tweenRotation = transform.DOLocalRotate(new Vector3(0f, transform.localRotation.y+180, 0f), 2f, RotateMode.LocalAxisAdd)
             .SetLoops(-1, LoopType.Restart)
             .SetEase(Ease.Linear);
         Tween tweenMotion = transform.DOLocalMoveY(transform.position.y+.25f, 1.6f)
