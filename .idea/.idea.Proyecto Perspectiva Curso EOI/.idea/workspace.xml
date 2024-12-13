@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="GravityChanger Key implemmented." />
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowBeam_lootbeam_NoGaps.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowBeam_lootbeam_NoGaps.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowNoise_Slow_Scaled.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowNoise_Slow_Scaled.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowSided.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowSided.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowSided_Soft.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowSided_Soft.mat" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +32,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Prefabs/Checkpoint.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/SpikeDamage.cs" root0="FORCE_HIGHLIGHTING" />
@@ -198,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733945270796</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Forgot the key prefab hee hee.">
+      <option name="closed" value="true" />
+      <created>1733945560741</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733945560741</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +265,7 @@
     <MESSAGE value="VFX Materials fixed." />
     <MESSAGE value="Coin basic function added." />
     <MESSAGE value="GravityChanger Key implemmented." />
-    <option name="LAST_COMMIT_MESSAGE" value="GravityChanger Key implemmented." />
+    <MESSAGE value="Forgot the key prefab hee hee." />
+    <option name="LAST_COMMIT_MESSAGE" value="Forgot the key prefab hee hee." />
   </component>
 </project>
