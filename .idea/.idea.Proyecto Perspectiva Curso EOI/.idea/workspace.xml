@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowBeam_lootbeam_NoGaps.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowBeam_lootbeam_NoGaps.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowNoise_Slow_Scaled.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowNoise_Slow_Scaled.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowSided.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowSided.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowSided_Soft.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Piloto Studio/Materials/Rainbow/RainbowSided_Soft.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GravityChanger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GravityChanger.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,15 +31,9 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Prefabs/Checkpoint.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/SpikeDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/ProjectSettings/GraphicsSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -92,10 +86,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13344">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="13344" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -115,6 +109,8 @@
       <workItem from="1733129136293" duration="611000" />
       <workItem from="1733746678112" duration="3948000" />
       <workItem from="1733756414796" duration="5445000" />
+      <workItem from="1734116374100" duration="3404000" />
+      <workItem from="1734120512314" duration="945000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore commit">
       <option name="closed" value="true" />
@@ -212,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733945560741</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Basic main menu created">
+      <option name="closed" value="true" />
+      <created>1734118537523</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1734118537523</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +270,26 @@
     <MESSAGE value="Coin basic function added." />
     <MESSAGE value="GravityChanger Key implemmented." />
     <MESSAGE value="Forgot the key prefab hee hee." />
-    <option name="LAST_COMMIT_MESSAGE" value="Forgot the key prefab hee hee." />
+    <MESSAGE value="Basic main menu created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic main menu created" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs</url>
+          <line>97</line>
+          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\PlayerController.cs" containingFunctionPresentation="Method 'ChargeJump'">
+            <startOffsets>
+              <option value="2560" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2670" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

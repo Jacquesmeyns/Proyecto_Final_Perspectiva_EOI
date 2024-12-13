@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 2850161025372257833}
   - component: {fileID: 1155038690569995269}
   - component: {fileID: 898254725088903928}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GravityChanger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

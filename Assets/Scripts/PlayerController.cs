@@ -21,12 +21,15 @@ public class PlayerController : MonoBehaviour
     private float currentTimeDown = 0;
     private IEnumerator chargeJump;
     private Vector3 moveDirection;
+    private bool jumpCharged = false;
+    private float allowedDistanceToJump = 0.3f;
     #endregion
     
     #region PhysicsVariables
     private Rigidbody rb;
     public Rigidbody Rb => rb;
     private Vector3 gyroUp => -GravityController.Gravity.normalized;
+    private SphereCollider sphereCollider;
     #endregion
 
     #region HealthSystem
@@ -49,6 +52,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         playerMaterial = GetComponent<Renderer>().material;
         healthPoints = MaxHealth;
+        sphereCollider = GetComponent<SphereCollider>();
     }
 
     public void ChangePlayerMaterialRed()
@@ -91,6 +95,11 @@ public class PlayerController : MonoBehaviour
 
     private void ChargeJump()
     {
+        Debug.DrawRay(transform.position, Vector3.down * (sphereCollider.radius + allowedDistanceToJump), Color.red );
+        Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit,
+            sphereCollider.radius + allowedDistanceToJump, LayerMask.GetMask("Ground"));
+        if (hit.collider == null)
+            return;
         if (chargeJump == null)
         {
             chargeJump = ChargeJumpCoroutine();
@@ -100,6 +109,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator ChargeJumpCoroutine()
     {
+        jumpCharged = true;
         while (currentTimeDown < maxJumpKeyDownTime)
         {
             currentTimeDown += Time.deltaTime;
@@ -110,9 +120,15 @@ public class PlayerController : MonoBehaviour
         StopCoroutine(chargeJump);
         chargeJump = null;
     }
+
     
+
     private void Jump()
     {
+        if (!jumpCharged)
+            return;
+        
+        jumpCharged = false;
         if (chargeJump != null)
         {
             StopCoroutine(chargeJump);
