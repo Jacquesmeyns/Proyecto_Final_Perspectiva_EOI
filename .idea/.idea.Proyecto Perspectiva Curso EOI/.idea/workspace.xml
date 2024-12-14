@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="Eternal jump bugfix.">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/Coin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Coin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +106,7 @@
       <workItem from="1733746678112" duration="3948000" />
       <workItem from="1733756414796" duration="5445000" />
       <workItem from="1734116374100" duration="3404000" />
-      <workItem from="1734120512314" duration="2393000" />
+      <workItem from="1734120512314" duration="3619000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore commit">
       <option name="closed" value="true" />
@@ -226,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734121540021</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="- Fixed coin rotation issue&#10;- Fixed visual overlap of different perspectives on Level1.unity&#10;- Player now easily jumps 3 blocks.">
+      <option name="closed" value="true" />
+      <created>1734123114251</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1734123114251</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +284,8 @@
     <MESSAGE value="Forgot the key prefab hee hee." />
     <MESSAGE value="Basic main menu created" />
     <MESSAGE value="Eternal jump bugfix." />
-    <option name="LAST_COMMIT_MESSAGE" value="Eternal jump bugfix." />
+    <MESSAGE value="- Fixed coin rotation issue&#10;- Fixed visual overlap of different perspectives on Level1.unity&#10;- Player now easily jumps 3 blocks." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed coin rotation issue&#10;- Fixed visual overlap of different perspectives on Level1.unity&#10;- Player now easily jumps 3 blocks." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

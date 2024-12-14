@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 
 public class Coin : MonoBehaviour
 {
-    private int value = 1;
+    [SerializeField] private int value = 1;
     [SerializeField] AudioClip sfx;
     AudioSource audio;
     void Start()

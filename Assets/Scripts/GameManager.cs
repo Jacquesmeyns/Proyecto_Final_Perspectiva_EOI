@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -13,12 +14,14 @@ public class GameManager : MonoBehaviour
     public GravityChanger currentGravityChanger;
     public CheckpointController currentCheckpoint;
 
+    [SerializeField] private TextMeshProUGUI textoPuntuación;
     private float totalScore = 0 ;
     private void Awake()
     {
         if(currentCheckpoint == null)
             throw new Exception("No first checkpoint setted. Please assign one for the player Spawn point.");
         player.transform.position = currentCheckpoint.SpawnPosition;
+        textoPuntuación.text = totalScore.ToString("000000");
     }
 
     public void ChangeToNewGravity()
@@ -92,5 +95,6 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int value)
     {
         totalScore += value;
+        textoPuntuación.text = totalScore.ToString("000000");
     }
 }
