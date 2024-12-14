@@ -244,6 +244,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage()
     {
+        gameManager.DoCameraShake();
         LoseHealth();
         UpdateHealthStatus();
         Teleport(gameManager.currentCheckpoint.SpawnPosition);

@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="" />
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="Scene was missing">
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/Coin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Coin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Dissolve.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Dissolve.shadergraph" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,10 +33,24 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Fonts/hexatus/hexatus SDF.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/SpikeDamage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/DamageOnTriggerEnter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactables/MoveSaw.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/UI/PauseMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core/Runtime/Utilities/CoreUtils.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Editor/TMP/TMP_BaseEditorPanel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Editor/TMP/TMP_SpriteAssetEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Editor/UGUI/UI/SpriteDrawUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Runtime/TMP/TextMeshProUGUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Runtime/UGUI/UI/Core/Mask.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Tests/Editor/UGUI/TestBehaviourBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Tests/Runtime/UGUI/Image/TestableImage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Tests/Runtime/UGUI/TextEditor/TextEditorTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting/Editor/VisualScripting.Flow/Options/UnitOption.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -82,10 +103,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13344">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7816">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="13344" />
+      <option name="pid" value="7816" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -107,6 +128,7 @@
       <workItem from="1733756414796" duration="5445000" />
       <workItem from="1734116374100" duration="3404000" />
       <workItem from="1734120512314" duration="3619000" />
+      <workItem from="1734169839153" duration="9236000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore commit">
       <option name="closed" value="true" />
@@ -228,7 +250,63 @@
       <option name="project" value="LOCAL" />
       <updated>1734123114251</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Score text added to level scene.">
+      <option name="closed" value="true" />
+      <created>1734170952314</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1734170952314</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Dissolve shader created for (maybe) later use.">
+      <option name="closed" value="true" />
+      <created>1734172644020</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1734172644020</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added new text font: hexatus.ttf">
+      <option name="closed" value="true" />
+      <created>1734174399387</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1734174399387</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added empty menu script to PauseMenu">
+      <option name="closed" value="true" />
+      <created>1734175456629</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1734175456629</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Created player prefab">
+      <option name="closed" value="true" />
+      <created>1734175644074</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1734175644074</updated>
+    </task>
+    <task id="LOCAL-00021" summary="- Basic saw created&#10;- Fixed physics bug by resetting rigidBody after tweening position.">
+      <option name="closed" value="true" />
+      <created>1734181692452</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1734181692452</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Scene was missing">
+      <option name="closed" value="true" />
+      <created>1734181715677</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1734181715677</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +363,14 @@
     <MESSAGE value="Basic main menu created" />
     <MESSAGE value="Eternal jump bugfix." />
     <MESSAGE value="- Fixed coin rotation issue&#10;- Fixed visual overlap of different perspectives on Level1.unity&#10;- Player now easily jumps 3 blocks." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixed coin rotation issue&#10;- Fixed visual overlap of different perspectives on Level1.unity&#10;- Player now easily jumps 3 blocks." />
+    <MESSAGE value="Score text added to level scene." />
+    <MESSAGE value="Dissolve shader created for (maybe) later use." />
+    <MESSAGE value="Added new text font: hexatus.ttf" />
+    <MESSAGE value="Added empty menu script to PauseMenu" />
+    <MESSAGE value="Created player prefab" />
+    <MESSAGE value="- Basic saw created&#10;- Fixed physics bug by resetting rigidBody after tweening position." />
+    <MESSAGE value="Scene was missing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scene was missing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -302,6 +387,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Interactables/Coin.cs</url>
+          <line>28</line>
+          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\Interactables\Coin.cs" containingFunctionPresentation="Method 'Appear'">
+            <startOffsets>
+              <option value="902" />
+            </startOffsets>
+            <endOffsets>
+              <option value="944" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

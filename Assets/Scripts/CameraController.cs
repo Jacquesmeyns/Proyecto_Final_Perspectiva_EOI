@@ -7,7 +7,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     //[SerializeField] private Transform dollyTransform;
-    [SerializeField] private CinemachineCamera vcam;
+    [SerializeField] public CinemachineCamera vcam;
     //[SerializeField] private CinemachineCameraOffset vcamOffset;
     private Transform target;
     private Vector3 newDollyPos;

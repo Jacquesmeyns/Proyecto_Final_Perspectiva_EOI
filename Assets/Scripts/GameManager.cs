@@ -103,4 +103,10 @@ public class GameManager : MonoBehaviour
         totalScore += value;
         textoPuntuación.text = totalScore.ToString("000000");
     }
+
+    public void DoCameraShake()
+    {
+        //TODO
+        // 
+    }
 }
