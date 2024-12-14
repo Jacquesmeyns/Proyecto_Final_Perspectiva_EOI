@@ -16,6 +16,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI textoPuntuación;
     private float totalScore = 0 ;
+
+    #region pauseMenu
+
+    private bool gamePaused = false;
+
+    #endregion
     private void Awake()
     {
         if(currentCheckpoint == null)
