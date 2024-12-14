@@ -1183,5 +1183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dc69ddaddbb37d44af0d1946506ba80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToAppear: 2
+  timeToDisappear: 0
   value: 100
   sfx: {fileID: 0}

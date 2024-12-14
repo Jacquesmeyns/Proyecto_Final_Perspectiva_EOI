@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="-Instanced material created&#10;-Still cant change shader var: TBC&#10;&#10;This is basically a sanity commit">
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="Coins appear and disappear. Shader working correctly and individually.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Skybox Cubemap Extended Blend.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Skybox Cubemap Extended Blend.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Skybox Cubemap Extended Night.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Skybox Cubemap Extended Night.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BOXOPHOBIC/Utils/Scene/Scene Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BOXOPHOBIC/Utils/Scene/Scene Skybox.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BottomObjectMaterial 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BottomObjectMaterial 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/TopObjectMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/TopObjectMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Checkpoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Checkpoint.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spikes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spikes.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/Coin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Coin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Dissolve.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Dissolve.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +47,13 @@
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/DamageOnTriggerEnter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/Interactables/Coin.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactables/HidableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactables/MoveSaw.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/UI/PauseMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core/Runtime/Utilities/CoreUtils.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Runtime/2D/UTess2D/PlanarGraph.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph/Editor/Drawing/PreviewManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Editor/TMP/TMP_BaseEditorPanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Editor/TMP/TMP_SpriteAssetEditor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -68,6 +79,7 @@
   &quot;keyToString&quot;: {
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.37213567&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -130,7 +142,7 @@
       <workItem from="1733756414796" duration="5445000" />
       <workItem from="1734116374100" duration="3404000" />
       <workItem from="1734120512314" duration="3619000" />
-      <workItem from="1734169839153" duration="10967000" />
+      <workItem from="1734169839153" duration="17042000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore commit">
       <option name="closed" value="true" />
@@ -316,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734184142382</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Coins appear and disappear. Shader working correctly and individually.">
+      <option name="closed" value="true" />
+      <created>1734185609727</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1734185609727</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,6 +401,39 @@
     <MESSAGE value="- Basic saw created&#10;- Fixed physics bug by resetting rigidBody after tweening position." />
     <MESSAGE value="Scene was missing" />
     <MESSAGE value="-Instanced material created&#10;-Still cant change shader var: TBC&#10;&#10;This is basically a sanity commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Instanced material created&#10;-Still cant change shader var: TBC&#10;&#10;This is basically a sanity commit" />
+    <MESSAGE value="Coins appear and disappear. Shader working correctly and individually." />
+    <option name="LAST_COMMIT_MESSAGE" value="Coins appear and disappear. Shader working correctly and individually." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs</url>
+          <line>31</line>
+          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\Interactables\GravityChanger.cs" containingFunctionPresentation="Method 'Start'">
+            <startOffsets>
+              <option value="1025" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1068" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Interactables/HidableObject.cs</url>
+          <line>12</line>
+          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\Interactables\HidableObject.cs" containingFunctionPresentation="Method 'Start'">
+            <startOffsets>
+              <option value="272" />
+            </startOffsets>
+            <endOffsets>
+              <option value="321" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -18,10 +20,20 @@ public class GravityChanger : MonoBehaviour
     public bool Active => active;
     private float colorChangeTime = 1.5f;
 
+    [SerializeField] private List<HidableObject> objectsToHide;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //Se comprueba orientación del primer checkpoint y se oculta si no coincide
+        if (gameManager.currentCheckpoint.transform.localRotation != nextSpawn.localRotation)
+        {
+            foreach (var objectToHide in objectsToHide)
+            {
+                objectToHide.Hide();
+            }
+        }
         Tween tween = iconGO.transform.DOLocalRotate(new Vector3(0f, iconGO.transform.rotation.y+180, 0f), 2f, RotateMode.WorldAxisAdd)
             .SetLoops(-1, LoopType.Yoyo)
             .SetEase(Ease.InOutCubic);
@@ -68,5 +80,13 @@ public class GravityChanger : MonoBehaviour
     {
         active = true;
         ChangeMaterialToActive();
+    }
+
+    public void ShowHiddenObjects()
+    {
+        foreach (var hiddenObject in objectsToHide)
+        {
+            hiddenObject.Appear();
+        }
     }
 }

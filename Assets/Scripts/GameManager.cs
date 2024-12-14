@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         if(newGravityDirection.x + newGravityDirection.y + newGravityDirection.z > 1)
             throw new Exception("The new gravity is not suitable for an isometric view. Two axis must be equal to zero.");
 
+        currentGravityChanger.ShowHiddenObjects();
         if (GravityController.ChangeGravityDirection(newGravityDirection))
             SetConstraints(newGravityDirection);
         else
