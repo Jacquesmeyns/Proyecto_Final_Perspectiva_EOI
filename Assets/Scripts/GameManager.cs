@@ -1,7 +1,10 @@
 using System;
+using System.Collections;
 using TMPro;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
@@ -13,8 +16,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] Vector3 topCameraPosition;
     public GravityChanger currentGravityChanger;
     public CheckpointController currentCheckpoint;
+    
+    // public InputActionReference escapeButtonAction;
 
+    #region UI
+    
     [SerializeField] private TextMeshProUGUI textoPuntuación;
+    
+    [SerializeField] private GameObject PauseMenuUI;
+    
+    #endregion
     private float totalScore = 0 ;
 
     #region pauseMenu
@@ -29,6 +40,11 @@ public class GameManager : MonoBehaviour
         player.transform.position = currentCheckpoint.SpawnPosition;
         textoPuntuación.text = totalScore.ToString("000000");
     }
+
+    // private void Start()
+    // {
+    //     escapeButtonAction.action.Disable();
+    // }
 
     public void ChangeToNewGravity()
     {
@@ -109,5 +125,47 @@ public class GameManager : MonoBehaviour
     {
         //TODO
         // 
+    }
+
+    public void PressEsc()
+    {
+        if (gamePaused)
+        {
+            ResumeGame();
+        }
+        else
+        {
+            PauseGame();
+        }
+    }
+    
+    public void PauseGame()
+    {
+        gamePaused = true;
+        Debug.Log("Pausando desde player");
+        Time.timeScale = 0;
+        PauseMenuUI.gameObject.SetActive(true);
+    }
+    
+    public void ResumeGame()
+    {
+        gamePaused = false;
+        Time.timeScale = 1;
+        Debug.Log("---Resume desde menu pausa");
+        PauseMenuUI.gameObject.SetActive(false);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        Time.timeScale = 1;
+        gamePaused = false;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1;
+        gamePaused = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

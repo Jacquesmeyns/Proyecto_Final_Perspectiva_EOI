@@ -9,9 +9,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameManager gameManager;
     public GameManager GameManager => gameManager;
     #region InputSystem
+    public PlayerInput playerInputSystem;
     public InputActionReference moveAction;
     public InputActionReference jumpAction;
     public InputActionReference interactAction;
+    public InputActionReference escapeButtonAction;
     #endregion
         
     #region MovementVariables
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour
         playerMaterial = GetComponent<Renderer>().material;
         healthPoints = MaxHealth;
         sphereCollider = GetComponent<SphereCollider>();
+        playerInputSystem = GetComponent<PlayerInput>();
     }
 
     public void ChangePlayerMaterialRed()
@@ -162,14 +165,21 @@ public class PlayerController : MonoBehaviour
     {
         jumpAction.action.started += ctx => ChargeJump();
         jumpAction.action.canceled += ctx => Jump();
+        jumpAction.action.Enable();
         interactAction.action.started += ctx => ChangeGravity();
+        interactAction.action.Enable();
+        escapeButtonAction.action.started += ctx => gameManager.PressEsc();
     }
 
     private void OnDisable()
     {
         jumpAction.action.started -= ctx => ChargeJump();
         jumpAction.action.canceled -= ctx => Jump();
+        jumpAction.action.Disable();
         interactAction.action.started -= ctx => ChangeGravity();
+        interactAction.action.Disable();
+        escapeButtonAction.action.started -= ctx => gameManager.PressEsc();
+        escapeButtonAction.action.Disable();
     }
 
     public void Teleport(Vector3 position)
