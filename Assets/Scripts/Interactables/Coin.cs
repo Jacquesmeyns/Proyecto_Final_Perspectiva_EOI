@@ -2,6 +2,7 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Serialization;
 
 public class Coin : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Coin : MonoBehaviour
     [SerializeField] AudioClip sfx;
     AudioSource audio;
     private Material material;
+    [SerializeField] private float timeToAppear;
+    [SerializeField] private float timeToDisappear;
+
     void Start()
     {
         Tween tweenRotation = transform.DOLocalRotate(new Vector3(0f, transform.localRotation.y+180, 0f), 2f, RotateMode.LocalAxisAdd)
@@ -20,19 +24,24 @@ public class Coin : MonoBehaviour
         // audio = GetComponent<AudioSource>();
 
         material = GetComponent<MeshRenderer>().material;
-        material = new Material(GetComponent<MeshRenderer>().material);
     }
 
-    [ContextMenu("Appear")]
     public void Appear()
     {
-        material.SetFloat("_DissolveStrength",1f);
-        DOVirtual.Float(0f, 1f, 1f, (_value) =>
+        DOVirtual.Float(1f, 0f, timeToAppear, (_value) =>
         {
             material.SetFloat("_DissolveStrength",_value);
         });
     }
-    
+
+    public void Disappear()
+    {
+        DOVirtual.Float(0f, 1f, timeToDisappear, (_value) =>
+        {
+            material.SetFloat("_DissolveStrength",_value);
+        });
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
