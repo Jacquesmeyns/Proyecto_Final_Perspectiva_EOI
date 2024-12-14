@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="- Created parent class HidableObject.cs.&#10;- Coin and Spike inherit from it.&#10;- Floor material is now unlit.&#10;- Now objects from other perspectives are not visible if player is not in the correct perspective.&#10;- Saw prefab created.">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/MoveSaw.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/MoveSaw.cs.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="- Fan script and prefab created." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,13 +28,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Fonts/hexatus/hexatus SDF.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/DamageOnTriggerEnter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/Interactables/Coin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactables/HidableObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactables/MoveSaw.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/UI/PauseMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
@@ -133,7 +128,7 @@
       <workItem from="1733756414796" duration="5445000" />
       <workItem from="1734116374100" duration="3404000" />
       <workItem from="1734120512314" duration="3619000" />
-      <workItem from="1734169839153" duration="17770000" />
+      <workItem from="1734169839153" duration="18454000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore commit">
       <option name="closed" value="true" />
@@ -335,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734204395885</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="- Fan script and prefab created.">
+      <option name="closed" value="true" />
+      <created>1734204992240</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1734204992241</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +380,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Gitignore commit" />
     <MESSAGE value="First commit" />
     <MESSAGE value="Debug arrow gizmo added to GravityChanger.cs" />
     <MESSAGE value="- Arrow model added&#10;- DrawGizmo on GravityChanger.prefab children added&#10;- Mobile Wall.prefab created&#10;- Made flippable constraints when gravity doesnt change but camera angle does. To be tweaked.&#10;- Tweaked CameraController.cs distanceOffset and NearClipPlane values. To be tweaked and tested even more.&#10;- GravityController.cs now has only one generic method.&#10;- Created Auxiliar.cs class for auxiliar static methods." />
@@ -402,7 +404,8 @@
     <MESSAGE value="-Instanced material created&#10;-Still cant change shader var: TBC&#10;&#10;This is basically a sanity commit" />
     <MESSAGE value="Coins appear and disappear. Shader working correctly and individually." />
     <MESSAGE value="- Created parent class HidableObject.cs.&#10;- Coin and Spike inherit from it.&#10;- Floor material is now unlit.&#10;- Now objects from other perspectives are not visible if player is not in the correct perspective.&#10;- Saw prefab created." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Created parent class HidableObject.cs.&#10;- Coin and Spike inherit from it.&#10;- Floor material is now unlit.&#10;- Now objects from other perspectives are not visible if player is not in the correct perspective.&#10;- Saw prefab created." />
+    <MESSAGE value="- Fan script and prefab created." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fan script and prefab created." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
