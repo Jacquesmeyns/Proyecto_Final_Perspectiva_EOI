@@ -174,8 +174,32 @@ public class PlayerController : MonoBehaviour
 
     public void Teleport(Vector3 position)
     {
-        transform.DOMove(position, 1f)
-            .SetEase(Ease.InOutCubic);
+        sphereCollider.enabled = false;
+        // ResetPhysics();
+        rb.transform.DOMove(position, 1f)
+            .SetEase(Ease.InOutCubic)
+            .OnComplete(() => { sphereCollider.enabled = true;
+                StartCoroutine(ResetPhysics(rb));
+            });
+    }
+
+    // private void ResetPhysics()
+    // {
+    //     rb.linearVelocity = Vector3.zero;
+    //     rb.angularVelocity = Vector3.zero;
+    //     rb.inertiaTensorRotation = Quaternion.identity;
+    //     rb.inertiaTensor = Vector3.zero;
+    //     rb.automaticInertiaTensor = true;
+    //     rb.isKinematic = true;
+    //     rb.isKinematic = false;
+    // }
+    
+    IEnumerator ResetPhysics(Rigidbody rB)
+    {
+        rB.linearVelocity = Vector3.zero;
+        rB.angularVelocity = Vector3.zero;
+
+        yield return new WaitForFixedUpdate();
     }
 
     public void LoseHealth()

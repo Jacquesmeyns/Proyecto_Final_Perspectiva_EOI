@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class SpikeDamage : MonoBehaviour
+public class DamageOnTriggerEnter : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
