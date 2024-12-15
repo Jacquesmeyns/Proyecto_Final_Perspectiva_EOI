@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     private float currentTimeDown = 0;
     private IEnumerator chargeJump;
     private Vector3 moveDirection;
+    private Vector3 currentAllowedDirection = Vector3.right;
+    private bool isMovementFlipped = false;
     private bool jumpCharged = false;
     private float allowedDistanceToJump = 0.3f;
     private float minJumpPercent = 0.33f;
@@ -88,7 +90,8 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         var moveInput = moveAction.action.ReadValue<Vector2>();
-        moveDirection = new Vector3(moveInput.x, 0, moveInput.y).normalized;
+        //moveDirection = new Vector3(moveInput.x, 0, moveInput.y).normalized;
+        moveDirection = moveInput.x * currentAllowedDirection;
     }
 
     private void FixedUpdate()
@@ -263,5 +266,11 @@ public class PlayerController : MonoBehaviour
         LoseHealth();
         UpdateHealthStatus();
         Teleport(gameManager.currentCheckpoint.SpawnPosition);
+    }
+
+    public void UpdateMovementDirection(Vector3 frozenDirection, Vector3 upDirection, bool flip = false)
+    {
+        currentAllowedDirection = Vector3.Cross( upDirection, frozenDirection);
+        if(flip) currentAllowedDirection *= -1;
     }
 }

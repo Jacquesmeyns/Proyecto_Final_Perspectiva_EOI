@@ -98,7 +98,11 @@ public class GameManager : MonoBehaviour
             case 4:
                 player.Rb.constraints = RigidbodyConstraints.FreezePositionZ;
                 break;
+            default:
+                throw new Exception("Cant constrain more than one rigidbody constraints.");
         }
+
+        player.UpdateMovementDirection(axisToLock, currentGravityChanger.nextCameraOrientation.transform.up, currentGravityChanger.flipMovement);
     }
 
     public void UpdateScore(int value)

@@ -21,6 +21,7 @@ public class GravityChanger : MonoBehaviour
     private float colorChangeTime = 1.5f;
 
     [SerializeField] private List<HidableObject> objectsToHide;
+    [SerializeField] public bool flipMovement = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
