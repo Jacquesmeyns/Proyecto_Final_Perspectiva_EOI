@@ -54,64 +54,50 @@ public class GameManager : MonoBehaviour
             throw new Exception("The new gravity is not suitable for an isometric view. Two axis must be equal to zero.");
 
         currentGravityChanger.ShowHiddenObjects();
-        if (GravityController.ChangeGravityDirection(newGravityDirection))
-            SetConstraints(newGravityDirection);
-        else
-            FlipConstraints(newGravityDirection);
+        GravityController.ChangeGravityDirection(newGravityDirection);
+        SetConstraints();
         player.Teleport(currentGravityChanger.nextSpawn.position);
         cameraController.MoveAndLookAtNewDir(currentGravityChanger);
     }
 
-    private void FlipConstraints(Vector3 gravity)
-    {
-        if(Mathf.Abs(gravity.x) == 1)
-            if (player.Rb.constraints == RigidbodyConstraints.FreezePositionZ)
-                player.Rb.constraints = RigidbodyConstraints.FreezePositionY;
-            else
-                player.Rb.constraints = RigidbodyConstraints.FreezePositionZ;
-        else if(Mathf.Abs(gravity.y) == 1)
-            if (player.Rb.constraints == RigidbodyConstraints.FreezePositionZ)
-                player.Rb.constraints = RigidbodyConstraints.FreezePositionX;
-            else
-                player.Rb.constraints = RigidbodyConstraints.FreezePositionZ;
-        else if(Mathf.Abs(gravity.z) == 1)
-            if (player.Rb.constraints == RigidbodyConstraints.FreezePositionX)
-                player.Rb.constraints = RigidbodyConstraints.FreezePositionY;
-            else
-                player.Rb.constraints = RigidbodyConstraints.FreezePositionX;
-    }
+    // private void FlipConstraints(Vector3 gravity)
+    // {
+    //     if(Mathf.Abs(gravity.x) == 1)
+    //         if (player.Rb.constraints == RigidbodyConstraints.FreezePositionZ)
+    //             player.Rb.constraints = RigidbodyConstraints.FreezePositionY;
+    //         else
+    //             player.Rb.constraints = RigidbodyConstraints.FreezePositionZ;
+    //     else if(Mathf.Abs(gravity.y) == 1)
+    //         if (player.Rb.constraints == RigidbodyConstraints.FreezePositionZ)
+    //             player.Rb.constraints = RigidbodyConstraints.FreezePositionX;
+    //         else
+    //             player.Rb.constraints = RigidbodyConstraints.FreezePositionZ;
+    //     else if(Mathf.Abs(gravity.z) == 1)
+    //         if (player.Rb.constraints == RigidbodyConstraints.FreezePositionX)
+    //             player.Rb.constraints = RigidbodyConstraints.FreezePositionY;
+    //         else
+    //             player.Rb.constraints = RigidbodyConstraints.FreezePositionX;
+    // }
 
-    public void SetConstraints(Vector3 newGravity)
+    public void SetConstraints()
     {
-        var nextPointLocalRotation = Auxiliar.Round(currentGravityChanger.nextSpawn.transform.localRotation.eulerAngles);
-        if (Mathf.Abs(newGravity.x) == 1)
+        var axisToLock = currentGravityChanger.nextCameraOrientation.transform.forward;
+        Debug.DrawRay(player.transform.position, axisToLock, Color.red);
+        LayerMask bitMask = new LayerMask();    //XYZ
+        bitMask = Mathf.RoundToInt(axisToLock.x) << 0 |
+                  Mathf.RoundToInt(axisToLock.y) << 1 |
+                  Mathf.RoundToInt(axisToLock.z) << 2;
+        switch (bitMask)
         {
-            if(Mathf.Abs(nextPointLocalRotation.x) == 90)
-                player.Rb.constraints = RigidbodyConstraints.FreezePositionZ;
-            else if (nextPointLocalRotation.y == 0 ||
-                     nextPointLocalRotation.y == 180)
-                player.Rb.constraints = RigidbodyConstraints.FreezePositionY;
-            else
-                throw new Exception("The nextSpawn rotation is not suitable for an isometric view.");
-        }
-        else if (Mathf.Abs(newGravity.y) == 1)
-        {
-            if(Mathf.Abs(nextPointLocalRotation.y) == 90)
-                player.Rb.constraints = RigidbodyConstraints.FreezePositionZ;
-            else if (nextPointLocalRotation.y == 0 ||
-                     nextPointLocalRotation.y == 180)
+            case 1:
                 player.Rb.constraints = RigidbodyConstraints.FreezePositionX;
-            else
-                throw new Exception("The nextSpawn rotation is not suitable for an isometric view.");
-        }
-        else if (Mathf.Abs(newGravity.z) == 1)
-        {
-            if(Mathf.Abs(nextPointLocalRotation.x) == 90)
-                player.Rb.constraints = RigidbodyConstraints.FreezePositionX;
-            else if (Mathf.Abs(nextPointLocalRotation.y) == 90)
+                break;
+            case 2:
                 player.Rb.constraints = RigidbodyConstraints.FreezePositionY;
-            else
-                throw new Exception("The nextSpawn rotation is not suitable for an isometric view.");
+                break;
+            case 4:
+                player.Rb.constraints = RigidbodyConstraints.FreezePositionZ;
+                break;
         }
     }
 

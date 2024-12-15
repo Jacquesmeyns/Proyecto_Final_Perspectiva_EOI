@@ -37,11 +37,10 @@ public class GravityController
     //     gravity = new Vector3(0, 0, -9.81f);
     // }
 
-    public static bool ChangeGravityDirection(Vector3 newGravityDirection)
+    public static void ChangeGravityDirection(Vector3 newGravityDirection)
     {
         if (newGravityDirection * gravityValue == gravity)  //No se cambia la gravedad porque está igual
-            return false;
+            return;
         gravity = newGravityDirection * gravityValue;
-        return true;
     }
 }
