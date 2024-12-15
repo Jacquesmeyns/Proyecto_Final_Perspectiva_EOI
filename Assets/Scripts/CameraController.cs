@@ -36,12 +36,21 @@ public class CameraController : MonoBehaviour
     /// </summary>
     /// <param name="newDirection"></param>
     /// TODO La cámara funciona bien pero si se pone desde un vector opuesto al usual, los controles no se invierten acorde a la nueva perspectiva, habrá que controlar la inversión de inputs
-    public void MoveAndLookAtNewDir(Vector3 newDirection)
+    public void MoveAndLookAtNewDir(GravityChanger gravityChanger, bool forceMaintainRotation = false)
     {
+        var newDirection = (gravityChanger.nextSpawn.position -
+                           gravityChanger.nextCameraOrientation.position).normalized;
+        //var newPosition = gravityChanger.nextSpawn.position;
+        var newRotation = gravityChanger.nextCameraOrientation.rotation;
+        
         //next rotation
-        var nextRotation = Quaternion.LookRotation(newDirection);
-        vcam.transform.DORotateQuaternion(nextRotation, tweenDuration)
-            .SetEase(Ease.InOutCubic);
+        if (!forceMaintainRotation)
+        {
+            //var nextRotation = Quaternion.LookRotation(newDirection);
+            vcam.transform.DORotateQuaternion(newRotation, tweenDuration)
+                .SetEase(Ease.InOutCubic);
+        }
+
         //Change position to new offset
         var newOffset = -newDirection * distanceOffset;
         changeOffset(newOffset);

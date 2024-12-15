@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         else
             FlipConstraints(newGravityDirection);
         player.Teleport(currentGravityChanger.nextSpawn.position);
-        cameraController.MoveAndLookAtNewDir(currentGravityChanger.nextSpawn.position - currentGravityChanger.nextCameraOrientation.position);
+        cameraController.MoveAndLookAtNewDir(currentGravityChanger);
     }
 
     private void FlipConstraints(Vector3 gravity)

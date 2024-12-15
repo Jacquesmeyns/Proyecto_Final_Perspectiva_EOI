@@ -16,7 +16,7 @@ public class GravityChanger : MonoBehaviour
     [SerializeField] public Mesh gizmoMesh;
 
     public bool isPlayerInside;
-    private bool active = false;
+    [SerializeField] private bool active = false;
     public bool Active => active;
     private float colorChangeTime = 1.5f;
 
@@ -71,8 +71,10 @@ public class GravityChanger : MonoBehaviour
         var defaultColor = Gizmos.color;
         Gizmos.color = Color.green;
         Gizmos.DrawMesh(gizmoMesh, nextSpawn.position, nextSpawn.rotation, Vector3.one);
+        Gizmos.color = Color.red;
+        Gizmos.DrawMesh(gizmoMesh, nextCameraOrientation.position, nextCameraOrientation.rotation, Vector3.one);
         Gizmos.color = defaultColor;
-        Gizmos.DrawSphere(nextCameraOrientation.position, 0.2f);
+        // Gizmos.DrawSphere(nextCameraOrientation.position, 0.2f);
         Gizmos.DrawLine(nextCameraOrientation.position, nextSpawn.position);
     }
 
