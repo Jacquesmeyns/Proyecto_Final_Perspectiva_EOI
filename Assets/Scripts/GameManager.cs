@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] Vector3 sideCameraPosition;
     [SerializeField] Vector3 topCameraPosition;
+    private GravityChanger lastGravityChanger;
     public GravityChanger currentGravityChanger;
     public CheckpointController currentCheckpoint;
     
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
             throw new Exception("No first checkpoint setted. Please assign one for the player Spawn point.");
         player.transform.position = currentCheckpoint.SpawnPosition;
         textoPuntuación.text = totalScore.ToString("000000");
+        lastGravityChanger = currentGravityChanger;
     }
 
     // private void Start()
@@ -53,6 +55,8 @@ public class GameManager : MonoBehaviour
         if(newGravityDirection.x + newGravityDirection.y + newGravityDirection.z > 1)
             throw new Exception("The new gravity is not suitable for an isometric view. Two axis must be equal to zero.");
 
+        lastGravityChanger.DisappearHiddableObjects();
+        lastGravityChanger = currentGravityChanger;
         currentGravityChanger.ShowHiddenObjects();
         GravityController.ChangeGravityDirection(newGravityDirection);
         SetConstraints();

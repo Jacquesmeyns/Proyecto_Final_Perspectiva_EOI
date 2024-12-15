@@ -5,10 +5,10 @@ using UnityEngine;
 public class HidableObject : MonoBehaviour
 {
     private Material material;
-    [SerializeField] private float timeToAppear;
-    [SerializeField] private float timeToDisappear;
+    [SerializeField] protected float timeToAppear;
+    [SerializeField] protected float timeToDisappear;
 
-    protected void Start()
+    protected void Awake()
     {
         material = GetComponent<MeshRenderer>().material;
     }
@@ -21,7 +21,7 @@ public class HidableObject : MonoBehaviour
         });
     }
 
-    public void Disappear()
+    public virtual void Disappear()
     {
         DOVirtual.Float(0f, 1f, timeToDisappear, (_value) =>
         {

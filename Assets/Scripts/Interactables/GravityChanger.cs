@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -18,17 +19,20 @@ public class GravityChanger : MonoBehaviour
     public bool isPlayerInside;
     [SerializeField] private bool active = false;
     public bool Active => active;
+
     private float colorChangeTime = 1.5f;
 
     [SerializeField] private List<HidableObject> objectsToHide;
     [SerializeField] public bool flipMovement = false;
+    [SerializeField, Tooltip("Forces previous rotation to be kept")] public bool forceMaintainRotation;
+    public bool ForceMaintainRotation => forceMaintainRotation;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //Se comprueba orientación del primer checkpoint y se oculta si no coincide
-        if (gameManager.currentCheckpoint.transform.localRotation != nextSpawn.localRotation)
+        if (gameManager.currentCheckpoint.SpawnTransform.localRotation != nextSpawn.localRotation)
         {
             foreach (var objectToHide in objectsToHide)
             {
@@ -90,6 +94,14 @@ public class GravityChanger : MonoBehaviour
         foreach (var hiddenObject in objectsToHide)
         {
             hiddenObject.Appear();
+        }
+    }
+
+    public void DisappearHiddableObjects()
+    {
+        foreach (var hiddenObject in objectsToHide.Where(hiddenObject => hiddenObject!=null))
+        {
+            hiddenObject.Disappear();
         }
     }
 }

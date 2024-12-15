@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class Spikes : HidableObject
 {
     private List<MeshRenderer> childMeshes;
-    void Start()
+    void Awake()
     {
         childMeshes = new List<MeshRenderer>();
         foreach (var mesh in GetComponentsInChildren<MeshRenderer>())
@@ -13,20 +14,28 @@ public class Spikes : HidableObject
         }
     }
 
-    public override void Hide()
+    public override void Appear()
     {
-        foreach (var childMesh in childMeshes)
+        foreach (var mesh in childMeshes)
         {
-            childMesh.enabled = false;
+            DOVirtual.Float(1f, 0f, timeToAppear, (_value) => { mesh.material.SetFloat("_DissolveStrength", _value); });
         }
     }
 
-    public override void Appear()
+    public override void Disappear()
     {
-        //TODO arreglar con un material que haga dissolve
-        foreach (var childMesh in childMeshes)
+        foreach (var mesh in childMeshes)
         {
-            childMesh.enabled = true;
+            DOVirtual.Float(0f, 1f, timeToDisappear, (_value) => { mesh.material.SetFloat("_DissolveStrength", _value); });
+        }
+    }
+
+    [ContextMenu("Hide Object")]
+    public override void Hide()
+    {
+        foreach (var mesh in childMeshes)
+        {
+            mesh.material.SetFloat("_DissolveStrength", 1f);
         }
     }
 }

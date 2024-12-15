@@ -122,9 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20924252cb7e0854d87d9b4c5e24b59b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gizmoMesh: {fileID: -236007797189776682, guid: 49bfb0b41969dbf44938c65e3c54e25d, type: 3}
   gameManager: {fileID: 0}
   spawnPosition: {fileID: 2543220358987329065}
-  nextCheckpoint: {fileID: 0}
 --- !u!1 &2583921458448522556
 GameObject:
   m_ObjectHideFlags: 0

@@ -1184,6 +1184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToAppear: 2
-  timeToDisappear: 0
+  timeToDisappear: 2
   value: 100
   sfx: {fileID: 0}

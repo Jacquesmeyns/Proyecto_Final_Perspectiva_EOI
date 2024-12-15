@@ -9,9 +9,9 @@ public class Coin : HidableObject
     [SerializeField] private int value = 1;
     [SerializeField] AudioClip sfx;
     AudioSource audio;
-    void Start()
+    void Awake()
     {
-        base.Start();
+        base.Awake();
         Tween tweenRotation = transform.DOLocalRotate(new Vector3(0f, transform.localRotation.y+180, 0f), 2f, RotateMode.LocalAxisAdd)
             .SetLoops(-1, LoopType.Restart)
             .SetEase(Ease.Linear);
