@@ -84,9 +84,9 @@ public class GameManager : MonoBehaviour
         var axisToLock = currentGravityChanger.nextCameraOrientation.transform.forward;
         Debug.DrawRay(player.transform.position, axisToLock, Color.red);
         LayerMask bitMask = new LayerMask();    //XYZ
-        bitMask = Mathf.RoundToInt(axisToLock.x) << 0 |
-                  Mathf.RoundToInt(axisToLock.y) << 1 |
-                  Mathf.RoundToInt(axisToLock.z) << 2;
+        bitMask = Mathf.Abs(Mathf.RoundToInt(axisToLock.x)) << 0 |
+                  Mathf.Abs(Mathf.RoundToInt(axisToLock.y)) << 1 |
+                  Mathf.Abs(Mathf.RoundToInt(axisToLock.z)) << 2;
         switch (bitMask)
         {
             case 1:
