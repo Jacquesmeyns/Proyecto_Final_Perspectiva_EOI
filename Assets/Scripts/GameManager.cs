@@ -159,6 +159,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         gamePaused = false;
+        player.DisableInputs();
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -166,6 +167,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         gamePaused = false;
+        player.DisableInputs();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

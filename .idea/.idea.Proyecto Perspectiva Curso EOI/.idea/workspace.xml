@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem/InputSystem_Actions.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem/InputSystem_Actions.inputactions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="- Pause menu added">
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
@@ -34,6 +29,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/DamageOnTriggerEnter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactables/HidableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
@@ -116,7 +112,7 @@
       <workItem from="1734116374100" duration="3404000" />
       <workItem from="1734120512314" duration="3619000" />
       <workItem from="1734169839153" duration="18454000" />
-      <workItem from="1734208059066" duration="7603000" />
+      <workItem from="1734208059066" duration="8903000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore commit">
       <option name="closed" value="true" />
@@ -326,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734204992241</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="- Pause menu added">
+      <option name="closed" value="true" />
+      <created>1734216768184</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1734216768184</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +372,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="First commit" />
     <MESSAGE value="Debug arrow gizmo added to GravityChanger.cs" />
     <MESSAGE value="- Arrow model added&#10;- DrawGizmo on GravityChanger.prefab children added&#10;- Mobile Wall.prefab created&#10;- Made flippable constraints when gravity doesnt change but camera angle does. To be tweaked.&#10;- Tweaked CameraController.cs distanceOffset and NearClipPlane values. To be tweaked and tested even more.&#10;- GravityController.cs now has only one generic method.&#10;- Created Auxiliar.cs class for auxiliar static methods." />
     <MESSAGE value="Level 1 created, not finished." />
@@ -393,25 +396,7 @@
     <MESSAGE value="Coins appear and disappear. Shader working correctly and individually." />
     <MESSAGE value="- Created parent class HidableObject.cs.&#10;- Coin and Spike inherit from it.&#10;- Floor material is now unlit.&#10;- Now objects from other perspectives are not visible if player is not in the correct perspective.&#10;- Saw prefab created." />
     <MESSAGE value="- Fan script and prefab created." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fan script and prefab created." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs</url>
-          <line>175</line>
-          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\PlayerController.cs" containingFunctionPresentation="Method 'OnDisable'">
-            <startOffsets>
-              <option value="5142" />
-            </startOffsets>
-            <endOffsets>
-              <option value="5191" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="- Pause menu added" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Pause menu added" />
   </component>
 </project>

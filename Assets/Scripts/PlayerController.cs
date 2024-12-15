@@ -173,6 +173,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnDisable()
     {
+        DisableInputs();
+    }
+
+    public void DisableInputs()
+    {
         jumpAction.action.started -= ctx => ChargeJump();
         jumpAction.action.canceled -= ctx => Jump();
         jumpAction.action.Disable();
