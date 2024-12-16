@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -17,14 +18,16 @@ public class GameManager : MonoBehaviour
     private GravityChanger lastGravityChanger;
     public GravityChanger currentGravityChanger;
     public CheckpointController currentCheckpoint;
+
+    public UnityEvent OnUILoad;
     
     // public InputActionReference escapeButtonAction;
 
     #region UI
     
-    [SerializeField] private TextMeshProUGUI textoPuntuación;
+    [HideInInspector] public TextMeshProUGUI textoPuntuación;
     
-    [SerializeField] private GameObject PauseMenuUI;
+    [HideInInspector] public GameObject PauseMenuUI;
     
     #endregion
     private float totalScore = 0 ;
@@ -39,11 +42,17 @@ public class GameManager : MonoBehaviour
         if(currentCheckpoint == null)
             throw new Exception("No first checkpoint setted. Please assign one for the player Spawn point.");
         player.transform.position = currentCheckpoint.SpawnPosition;
-        textoPuntuación.text = totalScore.ToString("000000");
         lastGravityChanger = currentGravityChanger;
         var newGravityDirection = -currentGravityChanger.nextSpawn.up;
         newGravityDirection = Auxiliar.Round(newGravityDirection);
         GravityController.ChangeGravityDirection(newGravityDirection);
+        OnUILoad  = new UnityEvent();
+        OnUILoad.AddListener(SetUp);
+    }
+
+    private void SetUp()
+    {
+        textoPuntuación.text = totalScore.ToString("000000");
     }
 
     // private void Start()
@@ -146,7 +155,6 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         gamePaused = true;
-        Debug.Log("Pausando desde player");
         Time.timeScale = 0;
         PauseMenuUI.gameObject.SetActive(true);
     }
@@ -155,7 +163,6 @@ public class GameManager : MonoBehaviour
     {
         gamePaused = false;
         Time.timeScale = 1;
-        Debug.Log("---Resume desde menu pausa");
         PauseMenuUI.gameObject.SetActive(false);
     }
 
