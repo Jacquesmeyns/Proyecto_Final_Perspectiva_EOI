@@ -20674,7 +20674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4657058064196405548, guid: 29a435d2e2c0aba448adea4b68776553, type: 3}
       propertyPath: moveDistance
-      value: -10
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 8164025295742560214, guid: 29a435d2e2c0aba448adea4b68776553, type: 3}
       propertyPath: m_Name
