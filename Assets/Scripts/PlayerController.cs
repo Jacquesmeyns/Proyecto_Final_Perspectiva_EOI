@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void ChargeJump()
+    private void ChargeJump(InputAction.CallbackContext ctx)
     {
         Debug.DrawRay(transform.position, GravityController.Gravity.normalized * (sphereCollider.radius + allowedDistanceToJump), Color.red );
         Physics.Raycast(transform.position, GravityController.Gravity.normalized, out RaycastHit hit,
@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
 
     
 
-    private void Jump()
+    private void Jump(InputAction.CallbackContext ctx)
     {
         if (!jumpCharged)
             return;
@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
         currentTimeDown = 0;
     }
     
-    private void ChangeGravity()
+    private void ChangeGravity(InputAction.CallbackContext ctx)
     {
         if (gameManager.currentGravityChanger==null || !gameManager.currentGravityChanger.Active)
         {
@@ -166,12 +166,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        jumpAction.action.started += ctx => ChargeJump();
-        jumpAction.action.canceled += ctx => Jump();
+        jumpAction.action.started += ChargeJump;
+        jumpAction.action.canceled += Jump;
         jumpAction.action.Enable();
-        interactAction.action.started += ctx => ChangeGravity();
+        interactAction.action.started += ChangeGravity;
         interactAction.action.Enable();
-        escapeButtonAction.action.started += ctx => gameManager.PressEsc();
+        escapeButtonAction.action.started += gameManager.PressEsc;
     }
 
     private void OnDisable()
@@ -181,12 +181,12 @@ public class PlayerController : MonoBehaviour
 
     public void DisableInputs()
     {
-        jumpAction.action.started -= ctx => ChargeJump();
-        jumpAction.action.canceled -= ctx => Jump();
+        jumpAction.action.started -= ChargeJump;
+        jumpAction.action.canceled -= Jump;
         jumpAction.action.Disable();
-        interactAction.action.started -= ctx => ChangeGravity();
+        interactAction.action.started -= ChangeGravity;
         interactAction.action.Disable();
-        escapeButtonAction.action.started -= ctx => gameManager.PressEsc();
+        escapeButtonAction.action.started -= gameManager.PressEsc;
         escapeButtonAction.action.Disable();
     }
 

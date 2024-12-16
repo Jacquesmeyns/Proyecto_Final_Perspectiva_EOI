@@ -41,6 +41,9 @@ public class GameManager : MonoBehaviour
         player.transform.position = currentCheckpoint.SpawnPosition;
         textoPuntuación.text = totalScore.ToString("000000");
         lastGravityChanger = currentGravityChanger;
+        var newGravityDirection = -currentGravityChanger.nextSpawn.up;
+        newGravityDirection = Auxiliar.Round(newGravityDirection);
+        GravityController.ChangeGravityDirection(newGravityDirection);
     }
 
     // private void Start()
@@ -121,7 +124,7 @@ public class GameManager : MonoBehaviour
         // 
     }
 
-    public void PressEsc()
+    public void PressEsc(InputAction.CallbackContext ctx)
     {
         if (gamePaused)
         {
@@ -163,5 +166,30 @@ public class GameManager : MonoBehaviour
         gamePaused = false;
         player.DisableInputs();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void LoadNextLevel()
+    {
+        var nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(nextScene);
+    }
+
+    public void EndLevel(Transform goal)
+    {
+        StartCoroutine(EndLevelCoroutine(goal));
+    }
+    
+    IEnumerator EndLevelCoroutine(Transform goal)
+    {
+        //deactivate camera lookat
+        cameraController.vcam.Follow = goal;
+        cameraController.LockToTarget.Damping = 3f;
+        //deactivate playerinput
+        //player.playerInputSystem.DeactivateInput();
+        yield return new WaitForSeconds(3f);
+        //Fadeout negro to next level
+        
+        //load next level
+        LoadNextLevel();
     }
 }

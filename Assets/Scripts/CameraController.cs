@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
 {
     //[SerializeField] private Transform dollyTransform;
     [SerializeField] public CinemachineCamera vcam;
+    public CinemachineHardLockToTarget LockToTarget;
     //[SerializeField] private CinemachineCameraOffset vcamOffset;
     private Transform target;
     private Vector3 newDollyPos;
@@ -19,6 +20,7 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
+        LockToTarget = vcam.GetComponent<CinemachineHardLockToTarget>();
         vcam.Lens.NearClipPlane = -15;
         target = vcam.Target.TrackingTarget;
         currentOffset = target.position + Vector3.back * distanceOffset;
