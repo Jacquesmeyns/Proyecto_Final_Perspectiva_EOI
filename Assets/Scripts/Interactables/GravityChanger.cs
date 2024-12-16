@@ -25,6 +25,7 @@ public class GravityChanger : MonoBehaviour
     [SerializeField] private List<HidableObject> objectsToHide;
     [SerializeField] public bool flipMovement = false;
     [SerializeField, Tooltip("Forces previous rotation to be kept")] public bool forceMaintainRotation;
+    [SerializeField] private bool forceShow = false;
     public bool ForceMaintainRotation => forceMaintainRotation;
 
 
@@ -32,7 +33,7 @@ public class GravityChanger : MonoBehaviour
     void Start()
     {
         //Se comprueba orientación del primer checkpoint y se oculta si no coincide
-        if (gameManager.currentCheckpoint.SpawnTransform.localRotation != nextSpawn.localRotation)
+        if (gameManager.currentCheckpoint.SpawnTransform.localRotation != nextSpawn.localRotation && !forceShow)
         {
             foreach (var objectToHide in objectsToHide)
             {

@@ -8,6 +8,7 @@ public class MoveObject : MonoBehaviour
     private Vector3 Start, End;
     [SerializeField] private float moveDistance;
     [SerializeField] private float Speed = 0.5f;
+    private float Time => Mathf.Abs(moveDistance / Speed);
     
     private IEnumerator moveLoop;
     private Rigidbody rb;
@@ -18,14 +19,14 @@ public class MoveObject : MonoBehaviour
     private void Awake()
     {
         Start = transform.position;
-        End = Start + moveDistance * Vector3.forward;
+        End = Start + moveDistance * transform.forward;
         direction = (End - Start).normalized;
         rb = GetComponent<Rigidbody>();
         transform.position = Start;
 
         rewind = Start.magnitude > End.magnitude ? 1 : -1;
         
-        rb.DOMove(End, Speed).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
+        rb.DOMove(End, Time).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
         // moveLoop = MoveCoroutine();
         // StartCoroutine(moveLoop);
     }
@@ -58,6 +59,6 @@ public class MoveObject : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         //Draw expectedEnd
-        Gizmos.DrawLine(transform.position, transform.position + moveDistance * Vector3.forward);
+        Gizmos.DrawLine(transform.position, transform.position + moveDistance * transform.forward);
     }
 }
