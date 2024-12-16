@@ -53,6 +53,13 @@ public class GameManager : MonoBehaviour
 
     public void ChangeToNewGravity()
     {
+        // if (currentGravityChanger.OnlyUseOnce)
+        // {
+        //     if (currentGravityChanger.activated) return;
+        //     currentGravityChanger.activated = true;
+        // }
+        currentGravityChanger.isPlayerInside = false;
+
         var newGravityDirection = -currentGravityChanger.nextSpawn.up;
         newGravityDirection = Auxiliar.Round(newGravityDirection);
         if(newGravityDirection.x + newGravityDirection.y + newGravityDirection.z > 1)
@@ -191,5 +198,10 @@ public class GameManager : MonoBehaviour
         
         //load next level
         LoadNextLevel();
+    }
+
+    public bool CanChangeGravity()
+    {
+        return currentGravityChanger != null && currentGravityChanger.Active;
     }
 }

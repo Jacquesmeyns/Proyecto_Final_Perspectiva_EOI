@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="- Missed something from the scene (level2)">
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="- Goal prefab created.&#10;Fixed various bugs:&#10;- Next level was not loading properly.&#10;- Player was not loading properly in next level (PlayerInput was being initialized wrong in OnEnable).&#10;- Various objects position and rotation adjusted.&#10;- Saw was rotating wrong. Also changed meshCollider for a BoxCollider.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Saw.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Saw.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spikes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spikes.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelTesting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheckpointController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CheckpointController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hazards/Spikes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hazards/Spikes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +38,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Prefabs/Saw.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/DamageOnTriggerEnter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/Hazards/MoveSaw.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactables/HidableObject.cs" root0="FORCE_HIGHLIGHTING" />
@@ -129,7 +128,7 @@
       <workItem from="1734169839153" duration="18454000" />
       <workItem from="1734208059066" duration="12970000" />
       <workItem from="1734259320758" duration="21198000" />
-      <workItem from="1734341330453" duration="16577000" />
+      <workItem from="1734341330453" duration="20810000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore commit">
       <option name="closed" value="true" />
@@ -419,7 +418,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734352216988</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="- Goal prefab created.&#10;Fixed various bugs:&#10;- Next level was not loading properly.&#10;- Player was not loading properly in next level (PlayerInput was being initialized wrong in OnEnable).&#10;- Various objects position and rotation adjusted.&#10;- Saw was rotating wrong. Also changed meshCollider for a BoxCollider.">
+      <option name="closed" value="true" />
+      <created>1734375218037</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1734375218037</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +468,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Forgot the key prefab hee hee." />
     <MESSAGE value="Basic main menu created" />
     <MESSAGE value="Eternal jump bugfix." />
     <MESSAGE value="- Fixed coin rotation issue&#10;- Fixed visual overlap of different perspectives on Level1.unity&#10;- Player now easily jumps 3 blocks." />
@@ -486,46 +492,47 @@
     <MESSAGE value="- Level 2 creation, unfinished." />
     <MESSAGE value="- Bugfixed saw movement.&#10;- Finished level2 (lacks end point)" />
     <MESSAGE value="- Missed something from the scene (level2)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Missed something from the scene (level2)" />
+    <MESSAGE value="- Goal prefab created.&#10;Fixed various bugs:&#10;- Next level was not loading properly.&#10;- Player was not loading properly in next level (PlayerInput was being initialized wrong in OnEnable).&#10;- Various objects position and rotation adjusted.&#10;- Saw was rotating wrong. Also changed meshCollider for a BoxCollider." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Goal prefab created.&#10;Fixed various bugs:&#10;- Next level was not loading properly.&#10;- Player was not loading properly in next level (PlayerInput was being initialized wrong in OnEnable).&#10;- Various objects position and rotation adjusted.&#10;- Saw was rotating wrong. Also changed meshCollider for a BoxCollider." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
-          <line>105</line>
+          <line>115</line>
           <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\GameManager.cs" containingFunctionPresentation="Method 'SetConstraints'">
             <startOffsets>
-              <option value="4071" />
+              <option value="4526" />
             </startOffsets>
             <endOffsets>
-              <option value="4146" />
+              <option value="4601" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs</url>
-          <line>183</line>
+          <line>184</line>
           <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\PlayerController.cs" containingFunctionPresentation="Method 'DisableInputs'">
             <startOffsets>
-              <option value="5482" />
+              <option value="5438" />
             </startOffsets>
             <endOffsets>
-              <option value="5522" />
+              <option value="5478" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs</url>
-          <line>168</line>
+          <line>169</line>
           <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\PlayerController.cs" containingFunctionPresentation="Method 'OnEnable'">
             <startOffsets>
-              <option value="5078" />
+              <option value="5034" />
             </startOffsets>
             <endOffsets>
-              <option value="5118" />
+              <option value="5074" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="52" />
@@ -542,32 +549,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs</url>
-          <line>105</line>
-          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\PlayerController.cs" containingFunctionPresentation="Method 'ChargeJump'">
-            <startOffsets>
-              <option value="2959" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3093" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs</url>
-          <line>153</line>
-          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\PlayerController.cs" containingFunctionPresentation="Method 'ChangeGravity'">
-            <startOffsets>
-              <option value="4517" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4606" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

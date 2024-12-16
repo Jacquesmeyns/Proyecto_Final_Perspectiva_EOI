@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3428486737106395456}
   - component: {fileID: 811164838459589616}
   - component: {fileID: 9135388458594419359}
-  - component: {fileID: 5930545104914049699}
   m_Layer: 0
   m_Name: Prism
   m_TagString: Untagged
@@ -257,28 +256,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91845442939685693}
   m_Mesh: {fileID: 0}
---- !u!64 &5930545104914049699
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91845442939685693}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1851356094669239702
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +269,6 @@ GameObject:
   - component: {fileID: 4815254962865147011}
   - component: {fileID: 6980873854496911806}
   - component: {fileID: 1501533233956910344}
-  - component: {fileID: 4370192605555775854}
   m_Layer: 0
   m_Name: Prism (1)
   m_TagString: Untagged
@@ -536,28 +512,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851356094669239702}
   m_Mesh: {fileID: 0}
---- !u!64 &4370192605555775854
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851356094669239702}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &2189453661558603760
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,7 +525,6 @@ GameObject:
   - component: {fileID: 7059765049880877649}
   - component: {fileID: 898847419436959202}
   - component: {fileID: 2131468996849164979}
-  - component: {fileID: 3498085772887281564}
   m_Layer: 0
   m_Name: Prism (3)
   m_TagString: Untagged
@@ -815,28 +768,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2189453661558603760}
   m_Mesh: {fileID: 0}
---- !u!64 &3498085772887281564
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2189453661558603760}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &2763230694336837553
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,7 +866,6 @@ GameObject:
   - component: {fileID: 7257666680588776178}
   - component: {fileID: 4470278725914083796}
   - component: {fileID: 3912776892749116611}
-  - component: {fileID: 1956550369125524576}
   m_Layer: 0
   m_Name: Prism (2)
   m_TagString: Untagged
@@ -1178,26 +1108,4 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4291000550746268176}
-  m_Mesh: {fileID: 0}
---- !u!64 &1956550369125524576
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4291000550746268176}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}

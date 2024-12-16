@@ -10,7 +10,12 @@ public class CheckpointController : MonoBehaviour
     public Transform SpawnTransform => spawnPosition;
     //[SerializeField] private CheckpointController nextCheckpoint;
     //public Vector3 nextSpawnPosition => nextCheckpoint.spawnPosition.position;
-    
+
+    private void Awake()
+    {
+        if(gameManager == null)
+            throw new ArgumentNullException("gameManager");
+    }
 
     private void OnTriggerEnter(Collider other)
     {

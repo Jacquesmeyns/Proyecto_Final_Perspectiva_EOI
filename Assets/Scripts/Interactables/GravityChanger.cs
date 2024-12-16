@@ -19,6 +19,8 @@ public class GravityChanger : MonoBehaviour
     public bool isPlayerInside;
     [SerializeField] private bool active = false;
     public bool Active => active;
+    // public bool OnlyUseOnce = false;
+    // public bool activated = false;
 
     private float colorChangeTime = 1.5f;
 

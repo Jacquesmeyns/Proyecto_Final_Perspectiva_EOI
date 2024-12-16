@@ -151,7 +151,8 @@ public class PlayerController : MonoBehaviour
     
     private void ChangeGravity(InputAction.CallbackContext ctx)
     {
-        if (gameManager.currentGravityChanger==null || !gameManager.currentGravityChanger.Active)
+        
+        if (!gameManager.CanChangeGravity())
         {
             //tween inactivo además de tener un color distinto
             return;
