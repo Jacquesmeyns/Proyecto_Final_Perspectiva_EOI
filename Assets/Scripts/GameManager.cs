@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public TextMeshProUGUI textoPuntuación;
     
     [HideInInspector] public GameObject PauseMenuUI;
+    [HideInInspector] public GameObject LoseMenuUI;
     
     #endregion
     private float totalScore = 0 ;
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
     #region pauseMenu
 
     private bool gamePaused = false;
+    private bool gameLost => player.HealthPoints <= 0;
 
     #endregion
     private void Awake()
@@ -142,7 +144,7 @@ public class GameManager : MonoBehaviour
 
     public void PressEsc(InputAction.CallbackContext ctx)
     {
-        if (gamePaused)
+        if (gamePaused && !gameLost)
         {
             ResumeGame();
         }
@@ -159,11 +161,20 @@ public class GameManager : MonoBehaviour
         PauseMenuUI.gameObject.SetActive(true);
     }
     
+    public void LoseGame()
+    {
+        //TODO coroutine para dar un poco de respiro
+        gamePaused = true;
+        Time.timeScale = 0;
+        LoseMenuUI.gameObject.SetActive(true);
+    }
+    
     public void ResumeGame()
     {
         gamePaused = false;
         Time.timeScale = 1;
         PauseMenuUI.gameObject.SetActive(false);
+        LoseMenuUI.gameObject.SetActive(false);
     }
 
     public void ReturnToMainMenu()

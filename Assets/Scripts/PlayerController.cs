@@ -254,10 +254,9 @@ public class PlayerController : MonoBehaviour
                     ChangePlayerMaterialBlue();
                     break;
             }
-            //TODO "Death" reset to last checkPoint
         }
         else{
-            //TODO Lose POPUP Screen
+            gameManager.LoseGame();
         }
     }
 
