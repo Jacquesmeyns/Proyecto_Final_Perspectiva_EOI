@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="- Fixed UI issue: Now the UI prefab is automatic and only needs one reference.">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +56,7 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Prefabs/Saw.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/CheckpointController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/DamageOnTriggerEnter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -154,7 +148,7 @@
       <workItem from="1734169839153" duration="18454000" />
       <workItem from="1734208059066" duration="12970000" />
       <workItem from="1734259320758" duration="21198000" />
-      <workItem from="1734341330453" duration="26225000" />
+      <workItem from="1734341330453" duration="26522000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore commit">
       <option name="closed" value="true" />
@@ -468,7 +462,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734393511120</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="- CameraShake added.&#10;- CameraController is now a prefab.">
+      <option name="closed" value="true" />
+      <created>1734395010446</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1734395010446</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +512,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="- Fixed coin rotation issue&#10;- Fixed visual overlap of different perspectives on Level1.unity&#10;- Player now easily jumps 3 blocks." />
     <MESSAGE value="Score text added to level scene." />
     <MESSAGE value="Dissolve shader created for (maybe) later use." />
     <MESSAGE value="Added new text font: hexatus.ttf" />
@@ -535,7 +536,8 @@
     <MESSAGE value="- Goal prefab created.&#10;Fixed various bugs:&#10;- Next level was not loading properly.&#10;- Player was not loading properly in next level (PlayerInput was being initialized wrong in OnEnable).&#10;- Various objects position and rotation adjusted.&#10;- Saw was rotating wrong. Also changed meshCollider for a BoxCollider." />
     <MESSAGE value="Readjusted assets and added LevelTesting as Level3. Also fixed some minor bugs." />
     <MESSAGE value="- Fixed UI issue: Now the UI prefab is automatic and only needs one reference." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixed UI issue: Now the UI prefab is automatic and only needs one reference." />
+    <MESSAGE value="- CameraShake added.&#10;- CameraController is now a prefab." />
+    <option name="LAST_COMMIT_MESSAGE" value="- CameraShake added.&#10;- CameraController is now a prefab." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
