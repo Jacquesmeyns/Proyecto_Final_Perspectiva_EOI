@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using Unity.Cinemachine;
 using Unity.VisualScripting;
@@ -8,6 +9,7 @@ public class CameraController : MonoBehaviour
 {
     //[SerializeField] private Transform dollyTransform;
     [SerializeField] public CinemachineCamera vcam;
+    private CinemachineBasicMultiChannelPerlin noise;
     public CinemachineHardLockToTarget LockToTarget;
     //[SerializeField] private CinemachineCameraOffset vcamOffset;
     private Transform target;
@@ -18,6 +20,9 @@ public class CameraController : MonoBehaviour
     private float distanceOffset = 1;
     private float tweenDuration = 1f;
 
+    [SerializeField] float shakeIntensity = 5f;
+    [SerializeField] float shakeDuration = 0.5f;
+
     private void Start()
     {
         LockToTarget = vcam.GetComponent<CinemachineHardLockToTarget>();
@@ -25,6 +30,7 @@ public class CameraController : MonoBehaviour
         target = vcam.Target.TrackingTarget;
         currentOffset = target.position + Vector3.back * distanceOffset;
         currentDirection = transform.forward;
+        noise = vcam.GetComponent<CinemachineBasicMultiChannelPerlin>();
     }
 
     private void Update()
@@ -64,5 +70,22 @@ public class CameraController : MonoBehaviour
         DOTween.To(() => currentOffset, x => currentOffset = x, newOffset, duration: tweenDuration)
             .SetEase(Ease.InOutCubic);
         //currentOffset = newOffset;
+    }
+
+    public void CameraShake()
+    {
+        StartCoroutine(ShakeCoroutine(shakeIntensity, shakeDuration));
+    }
+    
+    private IEnumerator ShakeCoroutine(float shakeIntensity, float shakeTiming)
+    {
+        Noise(5, shakeIntensity);
+        yield return new WaitForSeconds(shakeTiming);
+        Noise(0, 0);
+    }
+
+    public void Noise(float amplitudeGain, float frequencyGain) {
+        noise.AmplitudeGain = amplitudeGain;
+        noise.FrequencyGain = frequencyGain;     
     }
 }

@@ -4,34 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="Readjusted assets and added LevelTesting as Level3. Also fixed some minor bugs.">
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="- Fixed UI issue: Now the UI prefab is automatic and only needs one reference.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Checkpoint.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Checkpoint.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fan.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fan.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Goal.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Goal.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GravityChanger.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GravityChanger.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Key.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Key.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mobile Wall.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mobile Wall.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Saw.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Saw.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spikes.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spikes.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +33,34 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Prefabs/Saw.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -81,7 +88,7 @@
   "keyToString": {
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.9062885",
+    "XThreadsFramesViewSplitterKey": "0.9580765",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -147,7 +154,7 @@
       <workItem from="1734169839153" duration="18454000" />
       <workItem from="1734208059066" duration="12970000" />
       <workItem from="1734259320758" duration="21198000" />
-      <workItem from="1734341330453" duration="24629000" />
+      <workItem from="1734341330453" duration="26225000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore commit">
       <option name="closed" value="true" />
@@ -453,7 +460,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734381506283</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="- Fixed UI issue: Now the UI prefab is automatic and only needs one reference.">
+      <option name="closed" value="true" />
+      <created>1734393511120</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1734393511120</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +510,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Eternal jump bugfix." />
     <MESSAGE value="- Fixed coin rotation issue&#10;- Fixed visual overlap of different perspectives on Level1.unity&#10;- Player now easily jumps 3 blocks." />
     <MESSAGE value="Score text added to level scene." />
     <MESSAGE value="Dissolve shader created for (maybe) later use." />
@@ -520,12 +534,13 @@
     <MESSAGE value="- Missed something from the scene (level2)" />
     <MESSAGE value="- Goal prefab created.&#10;Fixed various bugs:&#10;- Next level was not loading properly.&#10;- Player was not loading properly in next level (PlayerInput was being initialized wrong in OnEnable).&#10;- Various objects position and rotation adjusted.&#10;- Saw was rotating wrong. Also changed meshCollider for a BoxCollider." />
     <MESSAGE value="Readjusted assets and added LevelTesting as Level3. Also fixed some minor bugs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Readjusted assets and added LevelTesting as Level3. Also fixed some minor bugs." />
+    <MESSAGE value="- Fixed UI issue: Now the UI prefab is automatic and only needs one reference." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed UI issue: Now the UI prefab is automatic and only needs one reference." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
           <line>124</line>
           <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\GameManager.cs" containingFunctionPresentation="Method 'SetConstraints'">
@@ -538,7 +553,7 @@
           </properties>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs</url>
           <line>184</line>
           <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\PlayerController.cs" containingFunctionPresentation="Method 'DisableInputs'">
@@ -551,7 +566,7 @@
           </properties>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
           <line>54</line>
           <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\GameManager.cs" containingFunctionPresentation="Method 'SetUp'">
@@ -565,17 +580,43 @@
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/PauseMenu.cs</url>
-          <line>16</line>
-          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\UI\PauseMenu.cs" containingFunctionPresentation="Method 'Start'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
+          <line>139</line>
+          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\GameManager.cs" containingFunctionPresentation="Method 'DoCameraShake'">
             <startOffsets>
-              <option value="466" />
+              <option value="5161" />
             </startOffsets>
             <endOffsets>
-              <option value="496" />
+              <option value="5192" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="63" />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs</url>
+          <line>81</line>
+          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\CameraController.cs" containingFunctionPresentation="Method 'ShakeCoroutine'">
+            <startOffsets>
+              <option value="2947" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2972" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs</url>
+          <line>83</line>
+          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\CameraController.cs" containingFunctionPresentation="Method 'ShakeCoroutine'">
+            <startOffsets>
+              <option value="3035" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3047" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

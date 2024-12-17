@@ -134,10 +134,10 @@ public class GameManager : MonoBehaviour
         textoPuntuación.text = totalScore.ToString("000000");
     }
 
+    [ContextMenu("Camera shake")]
     public void DoCameraShake()
     {
-        //TODO
-        // 
+        cameraController.CameraShake();
     }
 
     public void PressEsc(InputAction.CallbackContext ctx)
