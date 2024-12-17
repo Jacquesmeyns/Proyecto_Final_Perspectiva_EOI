@@ -901,7 +901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
-  scoreText: {fileID: 6183213614268202732}
+  scoreText: {fileID: 1399637579793639202}
   loseMenu: {fileID: 5212229333960937158}
 --- !u!1 &4879412773616956872
 GameObject:
