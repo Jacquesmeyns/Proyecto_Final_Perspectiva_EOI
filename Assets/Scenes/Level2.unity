@@ -24581,7 +24581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
       propertyPath: objectsToHide.Array.size
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
       propertyPath: 'objectsToHide.Array.data[0]'
@@ -24627,6 +24627,10 @@ PrefabInstance:
       propertyPath: 'objectsToHide.Array.data[10]'
       value: 
       objectReference: {fileID: 219009680}
+    - target: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
+      propertyPath: 'objectsToHide.Array.data[11]'
+      value: 
+      objectReference: {fileID: 1995154400}
     - target: {fileID: 2034998882919071630, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.49999863
@@ -24761,6 +24765,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2850161025372257833, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
   m_PrefabInstance: {fileID: 1410936108}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1410936111 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
+  m_PrefabInstance: {fileID: 1410936108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57ff072ac9e844a49bc02a6f57fe4b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1411524527
 GameObject:
   m_ObjectHideFlags: 0
@@ -31996,12 +32011,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
       propertyPath: objectsToHide.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
       propertyPath: 'objectsToHide.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1410936111}
     - target: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
       propertyPath: 'objectsToHide.Array.data[1]'
       value: 
@@ -32172,6 +32187,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2850161025372257833, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
   m_PrefabInstance: {fileID: 1854462174}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1854462176 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
+  m_PrefabInstance: {fileID: 1854462174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57ff072ac9e844a49bc02a6f57fe4b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1872405582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32246,6 +32272,10 @@ PrefabInstance:
       objectReference: {fileID: 259483757}
     - target: {fileID: 1155038690569995269, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828757310720782034, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2034998882919071630, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
@@ -36841,12 +36871,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
       propertyPath: objectsToHide.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
       propertyPath: 'objectsToHide.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1854462176}
     - target: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
       propertyPath: 'objectsToHide.Array.data[1]'
       value: 

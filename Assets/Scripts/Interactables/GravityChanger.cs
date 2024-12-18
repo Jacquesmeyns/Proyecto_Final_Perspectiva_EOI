@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 using UnityEngine.Splines;
 
-public class GravityChanger : MonoBehaviour
+public class GravityChanger : HidableObject
 {
     [SerializeField] GameManager gameManager;
     [SerializeField] GameObject iconGO;
@@ -31,7 +31,10 @@ public class GravityChanger : MonoBehaviour
     [SerializeField] private bool forceShow = false;
     public bool ForceMaintainRotation => forceMaintainRotation;
 
-
+    private void Awake()
+    {
+    }
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,8 +46,6 @@ public class GravityChanger : MonoBehaviour
                 objectToHide.Hide();
             }
         }
-        if (gameManager.currentCheckpoint.SpawnTransform.localRotation != transform.localRotation)
-            HideUberFXMaterials();
         Tween tween = iconGO.transform.DOLocalRotate(new Vector3(0f, iconGO.transform.rotation.y+180, 0f), 2f, RotateMode.WorldAxisAdd)
             .SetLoops(-1, LoopType.Yoyo)
             .SetEase(Ease.InOutCubic);
@@ -111,7 +112,6 @@ public class GravityChanger : MonoBehaviour
         }
     }
 
-    [ContextMenu("HideUberFX")]
     private void HideUberFXMaterials()
     {
         foreach (var renderer in UberFXRenderersList)
@@ -120,7 +120,6 @@ public class GravityChanger : MonoBehaviour
         }
     }
 
-    [ContextMenu("AppearUberFX")]
     public void AppearUberFXMaterials()
     {
         foreach (var renderer in UberFXRenderersList)
@@ -142,7 +141,6 @@ public class GravityChanger : MonoBehaviour
         }
     }
     
-    [ContextMenu("DisappearUberFX")]
     public void DisappearUberFXMaterials()
     {
         foreach (var renderer in UberFXRenderersList)
@@ -163,4 +161,24 @@ public class GravityChanger : MonoBehaviour
             }
         }
     }
+
+    #region HiddableOverrides
+
+    public override void Appear()
+    {
+        AppearUberFXMaterials();
+    }
+
+    public override void Disappear()
+    {
+        DisappearUberFXMaterials();
+    }
+
+    [ContextMenu("Hide Object")]
+    public override void Hide()
+    {
+        HideUberFXMaterials();
+    }
+
+    #endregion
 }

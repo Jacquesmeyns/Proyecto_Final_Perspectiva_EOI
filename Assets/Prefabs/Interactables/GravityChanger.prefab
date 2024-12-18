@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 8799815050249644461}
   - component: {fileID: 8856007809526250659}
   - component: {fileID: 8542709320551497972}
+  - component: {fileID: 1924941878968236144}
   m_Layer: 3
   m_Name: Base
   m_TagString: Untagged
@@ -194,6 +195,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828757310720782034}
   m_Mesh: {fileID: -6309271948806470130, guid: db33ea44f33b87e44a1ee297cc99b0f7, type: 3}
+--- !u!114 &1924941878968236144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828757310720782034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83d975e04fe5e1479a18bf017143f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationTarget: {x: 0, y: 0, z: 360}
+  TimeToRotate: 4
+  rotateMode: 3
+  loopType: 2
+  ease: 1
 --- !u!1 &5963858460216869963
 GameObject:
   m_ObjectHideFlags: 0
