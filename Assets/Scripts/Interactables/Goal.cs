@@ -19,6 +19,7 @@ public class Goal : MonoBehaviour
         {
             particleSystem.Play();
             gameManager.EndLevel(transform);
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 
