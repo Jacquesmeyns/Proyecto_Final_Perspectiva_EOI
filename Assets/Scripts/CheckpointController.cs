@@ -16,45 +16,24 @@ public class CheckpointController : MonoBehaviour
     // private List<ParticleSystem> activeParticles;
     public Vector3 SpawnPosition => spawnPosition.position;
     public Transform SpawnTransform => spawnPosition;
-    //[SerializeField] private CheckpointController nextCheckpoint;
-    //public Vector3 nextSpawnPosition => nextCheckpoint.spawnPosition.position;
-
     private void Awake()
     {
         if(gameManager == null)
             throw new ArgumentNullException("gameManager");
-        // activeParticles = new List<ParticleSystem>();
-        //
-        // foreach (var particleSystem in idleParticles.gameObject.GetComponentsInChildren<ParticleSystem>())
-        // {
-        //     if (particleSystem.isPlaying)
-        //     {
-        //         activeParticles.Add(particleSystem);
-        //     }
-        // }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            // var idleParticlesMain = idleParticles.main;
-            // idleParticlesMain.loop = false;
-            // idleParticles.Stop();
             foreach (var ray in RayCenters)
             {
                 ray.Stop(false, ParticleSystemStopBehavior.StopEmittingAndClear);
             }
-
             FireCenter.Stop();
-            
             gameManager.currentCheckpoint = this;
             activationParticles.gameObject.SetActive(true);
             activationParticles.Play(true);
-            // foreach (var particleSystem in activationParticles.gameObject.GetComponentsInChildren<ParticleSystem>())
-            // {
-            //     particleSystem.Play();
-            // }
             
             GetComponent<BoxCollider>().enabled = false;
         }
