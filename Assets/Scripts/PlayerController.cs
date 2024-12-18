@@ -70,6 +70,10 @@ public class PlayerController : MonoBehaviour
         {
             playerMaterial.color = value;
         });
+        DOVirtual.Color(playerMaterial.color, Color.red, colorChangeTime, (value) =>
+        {
+            trailRenderer.endColor = trailRenderer.startColor = value;
+        });
     }
     
     public void ChangePlayerMaterialOrange()
@@ -78,6 +82,10 @@ public class PlayerController : MonoBehaviour
         {
             playerMaterial.color = value;
         });
+        DOVirtual.Color(playerMaterial.color, new Color(1f, 0.5f, 0f), colorChangeTime, (value) =>
+        {
+            trailRenderer.endColor = trailRenderer.startColor = value;
+        });
     }
     
     public void ChangePlayerMaterialBlue()
@@ -85,6 +93,10 @@ public class PlayerController : MonoBehaviour
         DOVirtual.Color(playerMaterial.color, Color.blue, colorChangeTime, (value) =>
         {
             playerMaterial.color = value;
+        });
+        DOVirtual.Color(playerMaterial.color, Color.blue, colorChangeTime, (value) =>
+        {
+            trailRenderer.endColor = trailRenderer.startColor = value;
         });
     }
     

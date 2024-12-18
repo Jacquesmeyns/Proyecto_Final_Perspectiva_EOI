@@ -10,6 +10,7 @@ public class MoveSaw : MonoBehaviour
     [SerializeField] private float moveDistance;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rotationRPM;
+    [SerializeField] private LineRenderer line;
     private float timeToCompleteMove = 1f;
     private float timeToCompleteRotation = 1f;
     
@@ -27,6 +28,9 @@ public class MoveSaw : MonoBehaviour
         rb.DOMove(End, timeToCompleteMove).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
         rb.DORotate(new Vector3(0f, 0f, 360f), timeToCompleteRotation, RotateMode.LocalAxisAdd)
             .SetLoops(-1).SetEase(Ease.Linear);
+
+        var StartEnd = End - Start;
+        line.SetPositions(new Vector3[]{Start, Start + (StartEnd*0.01f), Start + (StartEnd*0.99f), End});
     }
 
     private void OnDrawGizmosSelected()

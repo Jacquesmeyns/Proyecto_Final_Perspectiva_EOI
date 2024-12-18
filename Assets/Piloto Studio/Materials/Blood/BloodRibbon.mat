@@ -20,7 +20,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2999
   stringTagMap:
     MotionVector: User
   disabledShaderPasses:
@@ -86,7 +86,7 @@ Material:
     - _MiddlePointPos1: 0.5
     - _MultiplyNoiseDesaturation: 1
     - _OpaqueCullMode: 2
-    - _QueueControl: 0
+    - _QueueControl: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _ReceivesSSR: 0
