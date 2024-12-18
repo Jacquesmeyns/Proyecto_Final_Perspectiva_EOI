@@ -13,7 +13,6 @@ public class CheckpointController : MonoBehaviour
     [SerializeField] List<ParticleSystem> RayCenters;
     [SerializeField] ParticleSystem FireCenter;
     
-    // private List<ParticleSystem> activeParticles;
     public Vector3 SpawnPosition => spawnPosition.position;
     public Transform SpawnTransform => spawnPosition;
     private void Awake()
