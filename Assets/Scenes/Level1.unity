@@ -10173,6 +10173,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3255495161764298650, guid: 977859887064235428d9387d1d6719e5, type: 3}
   m_PrefabInstance: {fileID: 1027955796}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1027955798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6821660925841338924, guid: 977859887064235428d9387d1d6719e5, type: 3}
+  m_PrefabInstance: {fileID: 1027955796}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20924252cb7e0854d87d9b4c5e24b59b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1064567987
 GameObject:
   m_ObjectHideFlags: 0
@@ -24788,7 +24799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
       propertyPath: objectsToHide.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
       propertyPath: 'objectsToHide.Array.data[0]'
@@ -24830,6 +24841,10 @@ PrefabInstance:
       propertyPath: 'objectsToHide.Array.data[9]'
       value: 
       objectReference: {fileID: 1827387286}
+    - target: {fileID: 898254725088903928, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
+      propertyPath: 'objectsToHide.Array.data[10]'
+      value: 
+      objectReference: {fileID: 1027955798}
     - target: {fileID: 2034998882919071630, guid: 2ed308e5a62111d4fba06815488f77b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

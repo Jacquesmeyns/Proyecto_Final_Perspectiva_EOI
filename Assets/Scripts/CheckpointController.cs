@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class CheckpointController : MonoBehaviour
+public class CheckpointController : HidableObject
 {
     [SerializeField] public Mesh gizmoMesh;
     [SerializeField] GameManager gameManager;
@@ -45,4 +45,24 @@ public class CheckpointController : MonoBehaviour
         Gizmos.DrawMesh(gizmoMesh, spawnPosition.position, spawnPosition.rotation, Vector3.one);
         Gizmos.color = defaultColor;
     }
+    
+    #region HiddableOverrides
+
+    public override void Appear()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public override void Disappear()
+    {
+        gameObject.SetActive(false);
+    }
+
+    [ContextMenu("Hide Object")]
+    public override void Hide()
+    {
+        gameObject.SetActive(false);
+    }
+
+    #endregion
 }
