@@ -7,10 +7,9 @@ using UnityEngine.Serialization;
 public class Coin : HidableObject
 {
     [SerializeField] private int value = 1;
-    [SerializeField] AudioClip sfx;
     [SerializeField] GameObject coinModel;
     [SerializeField] ParticleSystem explosionParticles;
-    AudioSource audio;
+    [SerializeField] AudioSource audioSource;
     void Awake()
     {
         Tween tweenRotation = coinModel.transform.DOLocalRotate(new Vector3(0f, 0f, transform.localRotation.z+180), 2f, RotateMode.LocalAxisAdd)
@@ -27,12 +26,7 @@ public class Coin : HidableObject
     {
         if (other.CompareTag("Player"))
         {
-            // if(sfx != null)
-            //     audio..PlayClipAtPoint(sfx, transform.position);
-            // else
-            // {
-            //     
-            // }
+            audioSource.Play();
             other.GetComponent<PlayerController>().GameManager.UpdateScore(value);
             GetComponent<SphereCollider>().enabled = false;
             coinModel.GetComponent<MeshRenderer>().enabled = false;

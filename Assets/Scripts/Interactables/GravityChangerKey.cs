@@ -7,6 +7,7 @@ public class GravityChangerKey : MonoBehaviour
     [SerializeField] ParticleSystem edgeVFX;
     [SerializeField] ParticleSystem mainVFX;
     [SerializeField] ParticleSystem backGlowVFX;
+    [SerializeField] AudioSource audioSource;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class GravityChangerKey : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            audioSource.Play();
             associatedGravityChanger.Activate();
             GetComponent<SphereCollider>().enabled =false;
             mainVFX.Stop();
