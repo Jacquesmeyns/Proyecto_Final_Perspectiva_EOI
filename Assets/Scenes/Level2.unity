@@ -199,6 +199,7 @@ MonoBehaviour:
       m_Calls: []
   "textoPuntuaci\xF3n": {fileID: 1093847371}
   PauseMenuUI: {fileID: 0}
+  LoseMenuUI: {fileID: 0}
 --- !u!4 &23352388
 Transform:
   m_ObjectHideFlags: 0
