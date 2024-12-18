@@ -370,6 +370,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ff072ac9e844a49bc02a6f57fe4b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToAppear: 2
+  timeToDisappear: 0.5
   gameManager: {fileID: 0}
   iconGO: {fileID: 708572357745016765}
   nextSpawn: {fileID: 2034998882919071630}

@@ -90,6 +90,7 @@ public class GravityChanger : HidableObject
         Gizmos.DrawLine(nextCameraOrientation.position, nextSpawn.position);
     }
 
+    [ContextMenu("Activate")]
     public void Activate()
     {
         active = true;
@@ -120,7 +121,7 @@ public class GravityChanger : HidableObject
         }
     }
 
-    public void AppearUberFXMaterials()
+    private void AppearUberFXMaterials(float duration)
     {
         foreach (var renderer in UberFXRenderersList)
         {
@@ -128,7 +129,7 @@ public class GravityChanger : HidableObject
             {
                 DOVirtual.Float(0f,
                     1f,
-                    2,
+                    duration,
                     (_value) =>
                     {
                         renderer.material.SetVector("_MainAlphaChannel",
@@ -141,7 +142,7 @@ public class GravityChanger : HidableObject
         }
     }
     
-    public void DisappearUberFXMaterials()
+    private void DisappearUberFXMaterials(float duration)
     {
         foreach (var renderer in UberFXRenderersList)
         {
@@ -149,7 +150,7 @@ public class GravityChanger : HidableObject
             {
                 DOVirtual.Float(1f,
                     0f,
-                    2,
+                    duration,
                     (_value) =>
                     {
                         renderer.material.SetVector("_MainAlphaChannel",
@@ -166,12 +167,12 @@ public class GravityChanger : HidableObject
 
     public override void Appear()
     {
-        AppearUberFXMaterials();
+        AppearUberFXMaterials(timeToAppear);
     }
 
     public override void Disappear()
     {
-        DisappearUberFXMaterials();
+        DisappearUberFXMaterials(timeToDisappear);
     }
 
     [ContextMenu("Hide Object")]

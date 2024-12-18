@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         // lastGravityChanger.DisappearUberFXMaterials();
         lastGravityChanger = currentGravityChanger;
         currentGravityChanger.ShowHiddenObjects();
-        currentGravityChanger.DisappearUberFXMaterials();
+        currentGravityChanger.Disappear();
         GravityController.ChangeGravityDirection(newGravityDirection);
         SetConstraints();
         player.Teleport(currentGravityChanger.nextSpawn.position);
