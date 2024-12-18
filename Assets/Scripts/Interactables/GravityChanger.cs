@@ -15,10 +15,14 @@ public class GravityChanger : HidableObject
     [SerializeField] public Transform nextSpawn;
     [SerializeField] public Transform nextCameraOrientation;
     [SerializeField] public Mesh gizmoMesh;
+    
+    [SerializeField] ParticleSystem mainVFX;
+    [SerializeField] ParticleSystem backGlowVFX;
 
     public bool isPlayerInside;
     [SerializeField] private bool active = false;
     public bool Active => active;
+    public GameObject IconGO => iconGO;
     // public bool OnlyUseOnce = false;
     // public bool activated = false;
 
@@ -46,6 +50,8 @@ public class GravityChanger : HidableObject
                 objectToHide.Hide();
             }
         }
+        if(!Active)
+            HideCustomVFX();
         Tween tween = iconGO.transform.DOLocalRotate(new Vector3(0f, iconGO.transform.rotation.y+180, 0f), 2f, RotateMode.WorldAxisAdd)
             .SetLoops(-1, LoopType.Yoyo)
             .SetEase(Ease.InOutCubic);
@@ -94,7 +100,8 @@ public class GravityChanger : HidableObject
     public void Activate()
     {
         active = true;
-        ChangeMaterialToActive();
+        // ChangeMaterialToActive();
+        PlayCustomVFX();
     }
 
     public void ShowHiddenObjects()
@@ -163,22 +170,40 @@ public class GravityChanger : HidableObject
         }
     }
 
+    private void HideCustomVFX()
+    {
+        mainVFX.Stop();
+        backGlowVFX.gameObject.SetActive(false);
+        mainVFX.gameObject.SetActive(false);
+    }
+    
+    private void PlayCustomVFX()
+    {
+        mainVFX.gameObject.SetActive(true);
+        mainVFX.Play();
+        backGlowVFX.gameObject.SetActive(true);
+    }
+
     #region HiddableOverrides
 
     public override void Appear()
     {
         AppearUberFXMaterials(timeToAppear);
+        if(Active)
+            PlayCustomVFX();
     }
 
     public override void Disappear()
     {
         DisappearUberFXMaterials(timeToDisappear);
+        HideCustomVFX();
     }
 
     [ContextMenu("Hide Object")]
     public override void Hide()
     {
         HideUberFXMaterials();
+        HideCustomVFX();
     }
 
     #endregion
