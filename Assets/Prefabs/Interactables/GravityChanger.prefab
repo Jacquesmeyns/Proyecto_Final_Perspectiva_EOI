@@ -360,6 +360,9 @@ MonoBehaviour:
   isPlayerInside: 0
   active: 0
   objectsToHide: []
+  UberFXRenderersList:
+  - {fileID: 8856007809526250659}
+  - {fileID: 5140092704335539171}
   flipMovement: 0
   forceMaintainRotation: 0
   forceShow: 0

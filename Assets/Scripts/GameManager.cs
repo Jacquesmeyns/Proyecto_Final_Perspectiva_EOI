@@ -77,8 +77,10 @@ public class GameManager : MonoBehaviour
             throw new Exception("The new gravity is not suitable for an isometric view. Two axis must be equal to zero.");
 
         lastGravityChanger.DisappearHiddableObjects();
+        // lastGravityChanger.DisappearUberFXMaterials();
         lastGravityChanger = currentGravityChanger;
         currentGravityChanger.ShowHiddenObjects();
+        // currentGravityChanger.AppearUberFXMaterials();
         GravityController.ChangeGravityDirection(newGravityDirection);
         SetConstraints();
         player.Teleport(currentGravityChanger.nextSpawn.position);

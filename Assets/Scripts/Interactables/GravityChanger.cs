@@ -25,6 +25,7 @@ public class GravityChanger : MonoBehaviour
     private float colorChangeTime = 1.5f;
 
     [SerializeField] private List<HidableObject> objectsToHide;
+    [SerializeField] private List<Renderer> UberFXRenderersList;
     [SerializeField] public bool flipMovement = false;
     [SerializeField, Tooltip("Forces previous rotation to be kept")] public bool forceMaintainRotation;
     [SerializeField] private bool forceShow = false;
@@ -42,6 +43,8 @@ public class GravityChanger : MonoBehaviour
                 objectToHide.Hide();
             }
         }
+        if (gameManager.currentCheckpoint.SpawnTransform.localRotation != transform.localRotation)
+            HideUberFXMaterials();
         Tween tween = iconGO.transform.DOLocalRotate(new Vector3(0f, iconGO.transform.rotation.y+180, 0f), 2f, RotateMode.WorldAxisAdd)
             .SetLoops(-1, LoopType.Yoyo)
             .SetEase(Ease.InOutCubic);
@@ -105,6 +108,59 @@ public class GravityChanger : MonoBehaviour
         foreach (var hiddenObject in objectsToHide.Where(hiddenObject => hiddenObject!=null))
         {
             hiddenObject.Disappear();
+        }
+    }
+
+    [ContextMenu("HideUberFX")]
+    private void HideUberFXMaterials()
+    {
+        foreach (var renderer in UberFXRenderersList)
+        {
+            renderer.material.SetVector("_MainAlphaChannel", new Vector4(0, 0, 0, 0));
+        }
+    }
+
+    [ContextMenu("AppearUberFX")]
+    public void AppearUberFXMaterials()
+    {
+        foreach (var renderer in UberFXRenderersList)
+        {
+            if(renderer.material.shader.name == "Piloto Studio/UberFX")
+            {
+                DOVirtual.Float(0f,
+                    1f,
+                    2,
+                    (_value) =>
+                    {
+                        renderer.material.SetVector("_MainAlphaChannel",
+                            new Vector4(0,
+                                0,
+                                0,
+                                _value));
+                    });
+            }
+        }
+    }
+    
+    [ContextMenu("DisappearUberFX")]
+    public void DisappearUberFXMaterials()
+    {
+        foreach (var renderer in UberFXRenderersList)
+        {
+            if (renderer.material.shader.name == "Piloto Studio/UberFX")
+            {
+                DOVirtual.Float(1f,
+                    0f,
+                    2,
+                    (_value) =>
+                    {
+                        renderer.material.SetVector("_MainAlphaChannel",
+                            new Vector4(0,
+                                0,
+                                0,
+                                _value));
+                    });
+            }
         }
     }
 }
