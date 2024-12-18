@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="- Material tweaking&#10;- Changed VFX in GravityChanger.prefab&#10;- Added coins to lvl 3">
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Universal Render Pipeline Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/New Universal Render Pipeline Asset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Hazards/Saw.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Hazards/Saw.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Fan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Fan.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/GravityChanger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/GravityChanger.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +38,9 @@
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Prefabs/UI/Canvas.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Prefabs/UI/Canvas.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/DamageOnTriggerEnter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/Interactables/GravityChanger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactables/HidableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/UI/PauseMenu.cs" root0="SKIP_HIGHLIGHTING" />
@@ -145,7 +138,7 @@
       <workItem from="1734208059066" duration="12970000" />
       <workItem from="1734259320758" duration="21198000" />
       <workItem from="1734341330453" duration="26522000" />
-      <workItem from="1734428978645" duration="8792000" />
+      <workItem from="1734428978645" duration="9804000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore commit">
       <option name="closed" value="true" />
@@ -491,7 +484,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734442619488</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="- Added new level (lvl4)&#10;- Updated saw and fan visuals&#10;- Maybe broke GravityChanger visuals (wrongly disappears, bad management)">
+      <option name="closed" value="true" />
+      <created>1734480912791</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1734480912791</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +534,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Added empty menu script to PauseMenu" />
     <MESSAGE value="Created player prefab" />
     <MESSAGE value="- Basic saw created&#10;- Fixed physics bug by resetting rigidBody after tweening position." />
     <MESSAGE value="Scene was missing" />
@@ -558,7 +558,8 @@
     <MESSAGE value="- Changed checkpoint material&#10;- Changed coin model scale" />
     <MESSAGE value="- Basic lose menu created." />
     <MESSAGE value="- Material tweaking&#10;- Changed VFX in GravityChanger.prefab&#10;- Added coins to lvl 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Material tweaking&#10;- Changed VFX in GravityChanger.prefab&#10;- Added coins to lvl 3" />
+    <MESSAGE value="- Added new level (lvl4)&#10;- Updated saw and fan visuals&#10;- Maybe broke GravityChanger visuals (wrongly disappears, bad management)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added new level (lvl4)&#10;- Updated saw and fan visuals&#10;- Maybe broke GravityChanger visuals (wrongly disappears, bad management)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
