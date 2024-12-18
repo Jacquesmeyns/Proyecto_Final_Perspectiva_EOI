@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
     private Material playerMaterial;
     [SerializeField] private float colorChangeTime = 2;
     
-
+    [SerializeField] private TrailRenderer trailRenderer;
     #endregion
 
     private void Awake()
@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
         healthPoints = MaxHealth;
         sphereCollider = GetComponent<SphereCollider>();
         playerInputSystem = GetComponent<PlayerInput>();
+        playerMaterial.color = Color.blue;
+        trailRenderer.endColor = trailRenderer.startColor = Color.blue;
     }
 
     public void ChangePlayerMaterialRed()

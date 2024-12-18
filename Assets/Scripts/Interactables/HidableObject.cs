@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HidableObject : MonoBehaviour
 {
-    private Material material;
+    protected Material material;
     [SerializeField] protected float timeToAppear;
     [SerializeField] protected float timeToDisappear;
 

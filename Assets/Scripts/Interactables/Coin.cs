@@ -8,16 +8,19 @@ public class Coin : HidableObject
 {
     [SerializeField] private int value = 1;
     [SerializeField] AudioClip sfx;
+    [SerializeField] GameObject coinModel;
+    [SerializeField] ParticleSystem explosionParticles;
     AudioSource audio;
     void Awake()
     {
-        base.Awake();
-        Tween tweenRotation = transform.DOLocalRotate(new Vector3(0f, transform.localRotation.y+180, 0f), 2f, RotateMode.LocalAxisAdd)
+        Tween tweenRotation = coinModel.transform.DOLocalRotate(new Vector3(0f, 0f, transform.localRotation.z+180), 2f, RotateMode.LocalAxisAdd)
             .SetLoops(-1, LoopType.Restart)
             .SetEase(Ease.Linear);
-        Tween tweenMotion = transform.DOLocalMoveY(transform.position.y+.25f, 1.6f)
+        Tween tweenMotion = coinModel.transform.DOLocalMoveY(coinModel.transform.localPosition.y+.25f, 1.6f)
             .SetLoops(-1, LoopType.Yoyo)
             .SetEase(Ease.InOutCubic);
+
+        material = coinModel.GetComponent<MeshRenderer>().material;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,7 +34,9 @@ public class Coin : HidableObject
             //     
             // }
             other.GetComponent<PlayerController>().GameManager.UpdateScore(value);
-            Destroy(gameObject);
+            GetComponent<SphereCollider>().enabled = false;
+            coinModel.GetComponent<MeshRenderer>().enabled = false;
+            explosionParticles.Play(true);
         }
     }
 }
