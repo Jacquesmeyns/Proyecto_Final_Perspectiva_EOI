@@ -14,10 +14,10 @@ public class PauseMenu : MonoBehaviour
             throw new ArgumentNullException("gameManager");
         gameManager.PauseMenuUI = gameObject;
         gameManager.LoseMenuUI = loseMenu;
-        gameManager.textoPuntuación = scoreText;
+        gameManager.scoreText = scoreText;
         gameObject.SetActive(false);
         loseMenu.SetActive(false);
-        gameManager.OnUILoad.Invoke();
+        gameManager.onUILoad.Invoke();
     }
     
     public void RestartGame()

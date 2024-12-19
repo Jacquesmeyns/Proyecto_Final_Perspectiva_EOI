@@ -53,6 +53,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private TrailRenderer trailRenderer;
     #endregion
 
+    #region Audio
+
+    [SerializeField] private AudioClip damageSfx;
+    [SerializeField] private AudioClip chargeJumpSfx;
+    [SerializeField] private AudioClip releaseJumpSfx;
+    [SerializeField] private AudioSource audioSource;
+
+    #endregion
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -114,6 +123,10 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(moveDirection * Speed);
     }
 
+    public void DisableMoveInput()
+    {
+        moveAction.action.Disable();
+    }
 
     private void ChargeJump(InputAction.CallbackContext ctx)
     {
@@ -131,6 +144,8 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator ChargeJumpCoroutine()
     {
+        audioSource.clip = chargeJumpSfx;
+        audioSource.Play();
         jumpCharged = true;
         while (currentTimeDown < maxJumpKeyDownTime)
         {
@@ -151,6 +166,12 @@ public class PlayerController : MonoBehaviour
             return;
         
         jumpCharged = false;
+        
+        if(audioSource.clip == chargeJumpSfx && audioSource.isPlaying)
+            audioSource.Stop();
+        audioSource.clip = releaseJumpSfx;
+        audioSource.Play();
+        
         if (chargeJump != null)
         {
             StopCoroutine(chargeJump);
@@ -277,6 +298,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage()
     {
         gameManager.DoCameraShake();
+        audioSource.PlayOneShot(damageSfx);
         LoseHealth();
         UpdateHealthStatus();
         Teleport(gameManager.currentCheckpoint.SpawnPosition);

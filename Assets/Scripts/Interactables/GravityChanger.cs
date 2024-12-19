@@ -18,6 +18,7 @@ public class GravityChanger : HidableObject
     
     [SerializeField] ParticleSystem mainVFX;
     [SerializeField] ParticleSystem backGlowVFX;
+    [SerializeField] AudioSource audioSource;
 
     public bool isPlayerInside;
     [SerializeField] private bool active = false;
@@ -37,6 +38,11 @@ public class GravityChanger : HidableObject
 
     private void Awake()
     {
+    }
+
+    public void PlaySFX()
+    {
+        audioSource.Play();
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -74,15 +80,6 @@ public class GravityChanger : HidableObject
             isPlayerInside = false;
         }
     }
-
-    public void ChangeMaterialToActive()
-    {
-        var iconMaterial = iconGO.GetComponent<Renderer>().material;
-        DOVirtual.Color(iconMaterial.color, new Color(0.33f,0.20f,0.45f, 1f), colorChangeTime, (value) =>
-        {
-            iconMaterial.color = value;
-        });
-    }
     
     private void OnDrawGizmosSelected()
     {
@@ -97,10 +94,9 @@ public class GravityChanger : HidableObject
     }
 
     [ContextMenu("Activate")]
-    public void Activate()
+    public void SetActive()
     {
         active = true;
-        // ChangeMaterialToActive();
         PlayCustomVFX();
     }
 
@@ -207,4 +203,11 @@ public class GravityChanger : HidableObject
     }
 
     #endregion
+
+    public void Activate()
+    {
+        ShowHiddenObjects();
+        Disappear();
+        PlaySFX();
+    }
 }

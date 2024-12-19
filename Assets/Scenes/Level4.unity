@@ -459,10 +459,10 @@ MonoBehaviour:
   topCameraPosition: {x: 0, y: 10, z: 3}
   currentGravityChanger: {fileID: 1319309588}
   currentCheckpoint: {fileID: 3782205405105815507}
-  OnUILoad:
+  onUILoad:
     m_PersistentCalls:
       m_Calls: []
-  "textoPuntuaci\xF3n": {fileID: 606189559}
+  scoreText: {fileID: 0}
   PauseMenuUI: {fileID: 340041619}
   LoseMenuUI: {fileID: 0}
 --- !u!4 &23352388
@@ -14469,17 +14469,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!114 &606189559 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1399637579793639202, guid: af9e1470a62aea441923203e98343e5e, type: 3}
-  m_PrefabInstance: {fileID: 1799163308}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &607055715
 GameObject:
   m_ObjectHideFlags: 0
@@ -47054,7 +47043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1781126190848949582, guid: 977859887064235428d9387d1d6719e5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3255495161764298650, guid: 977859887064235428d9387d1d6719e5, type: 3}
       propertyPath: m_LocalPosition.x

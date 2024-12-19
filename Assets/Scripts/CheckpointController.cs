@@ -12,7 +12,8 @@ public class CheckpointController : HidableObject
     [SerializeField] ParticleSystem activationParticles;
     [SerializeField] List<ParticleSystem> RayCenters;
     [SerializeField] ParticleSystem FireCenter;
-    
+
+    [SerializeField] private AudioSource audioSource;
     public Vector3 SpawnPosition => spawnPosition.position;
     public Transform SpawnTransform => spawnPosition;
     private void Awake()
@@ -25,6 +26,7 @@ public class CheckpointController : HidableObject
     {
         if (other.CompareTag("Player"))
         {
+            audioSource.Play();
             foreach (var ray in RayCenters)
             {
                 ray.Stop(false, ParticleSystemStopBehavior.StopEmittingAndClear);

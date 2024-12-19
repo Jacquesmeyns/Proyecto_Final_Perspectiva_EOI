@@ -551,10 +551,10 @@ MonoBehaviour:
   topCameraPosition: {x: 0, y: 10, z: 3}
   currentGravityChanger: {fileID: 931828552}
   currentCheckpoint: {fileID: 3782205405105815507}
-  OnUILoad:
+  onUILoad:
     m_PersistentCalls:
       m_Calls: []
-  "textoPuntuaci\xF3n": {fileID: 521220943}
+  scoreText: {fileID: 0}
   PauseMenuUI: {fileID: 1018725141}
   LoseMenuUI: {fileID: 0}
 --- !u!4 &23352388
@@ -4855,17 +4855,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0dc69ddaddbb37d44af0d1946506ba80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &521220943 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1399637579793639202, guid: af9e1470a62aea441923203e98343e5e, type: 3}
-  m_PrefabInstance: {fileID: 618250129568515429}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &534457444
@@ -24528,7 +24517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1781126190848949582, guid: 977859887064235428d9387d1d6719e5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2543220358987329065, guid: 977859887064235428d9387d1d6719e5, type: 3}
       propertyPath: m_LocalRotation.w

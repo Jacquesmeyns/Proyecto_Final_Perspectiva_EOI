@@ -19,13 +19,13 @@ public class GameManager : MonoBehaviour
     public GravityChanger currentGravityChanger;
     public CheckpointController currentCheckpoint;
 
-    public UnityEvent OnUILoad;
+    public UnityEvent onUILoad;
     
     // public InputActionReference escapeButtonAction;
 
     #region UI
     
-    [HideInInspector] public TextMeshProUGUI textoPuntuación;
+    [HideInInspector] public TextMeshProUGUI scoreText;
     
     [HideInInspector] public GameObject PauseMenuUI;
     [HideInInspector] public GameObject LoseMenuUI;
@@ -48,27 +48,17 @@ public class GameManager : MonoBehaviour
         var newGravityDirection = -currentGravityChanger.nextSpawn.up;
         newGravityDirection = Auxiliar.Round(newGravityDirection);
         GravityController.ChangeGravityDirection(newGravityDirection);
-        OnUILoad  = new UnityEvent();
-        OnUILoad.AddListener(SetUp);
+        onUILoad  = new UnityEvent();
+        onUILoad.AddListener(SetUp);
     }
 
     private void SetUp()
     {
-        textoPuntuación.text = totalScore.ToString("000000");
+        scoreText.text = totalScore.ToString("000000");
     }
-
-    // private void Start()
-    // {
-    //     escapeButtonAction.action.Disable();
-    // }
 
     public void ChangeToNewGravity()
     {
-        // if (currentGravityChanger.OnlyUseOnce)
-        // {
-        //     if (currentGravityChanger.activated) return;
-        //     currentGravityChanger.activated = true;
-        // }
         currentGravityChanger.isPlayerInside = false;
 
         var newGravityDirection = -currentGravityChanger.nextSpawn.up;
@@ -77,10 +67,11 @@ public class GameManager : MonoBehaviour
             throw new Exception("The new gravity is not suitable for an isometric view. Two axis must be equal to zero.");
 
         lastGravityChanger.DisappearHiddableObjects();
-        // lastGravityChanger.DisappearUberFXMaterials();
+
         lastGravityChanger = currentGravityChanger;
-        currentGravityChanger.ShowHiddenObjects();
-        currentGravityChanger.Disappear();
+
+        currentGravityChanger.Activate();
+        
         GravityController.ChangeGravityDirection(newGravityDirection);
         SetConstraints();
         player.Teleport(currentGravityChanger.nextSpawn.position);
@@ -135,7 +126,7 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int value)
     {
         totalScore += value;
-        textoPuntuación.text = totalScore.ToString("000000");
+        scoreText.text = totalScore.ToString("000000");
     }
 
     [ContextMenu("Camera shake")]
@@ -223,5 +214,10 @@ public class GameManager : MonoBehaviour
     public bool CanChangeGravity()
     {
         return currentGravityChanger != null && currentGravityChanger.Active;
+    }
+
+    public void DisablePlayer()
+    {
+        player.DisableMoveInput();
     }
 }

@@ -6,6 +6,7 @@ public class Goal : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
     [SerializeField] ParticleSystem particleSystem;
+    [SerializeField] AudioSource audioSource;
 
     private void Awake()
     {
@@ -17,8 +18,10 @@ public class Goal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            audioSource.Play();
             particleSystem.Play();
             gameManager.EndLevel(transform);
+            gameManager.DisablePlayer();
             GetComponent<BoxCollider>().enabled = false;
         }
     }

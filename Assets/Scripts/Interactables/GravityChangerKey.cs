@@ -26,7 +26,7 @@ public class GravityChangerKey : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             audioSource.Play();
-            associatedGravityChanger.Activate();
+            associatedGravityChanger.SetActive();
             GetComponent<SphereCollider>().enabled =false;
             mainVFX.Stop();
             edgeVFX.Stop();
