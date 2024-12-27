@@ -157,6 +157,9 @@ MonoBehaviour:
   onUILoad:
     m_PersistentCalls:
       m_Calls: []
+  onTimerEnd:
+    m_PersistentCalls:
+      m_Calls: []
   scoreText: {fileID: 0}
   PauseMenuUI: {fileID: 340041619}
   LoseMenuUI: {fileID: 0}
@@ -1370,6 +1373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key
       objectReference: {fileID: 0}
+    - target: {fileID: 8047423511719481178, guid: 71575dab5ee6aa94690820b82f5f1ae9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8076529624507470230, guid: 71575dab5ee6aa94690820b82f5f1ae9, type: 3}
       propertyPath: associatedGravityChanger
       value: 
@@ -2513,6 +2520,10 @@ PrefabInstance:
     - target: {fileID: 757487564676249960, guid: 8b6d4ac8188d52b45a5ae451860c685b, type: 3}
       propertyPath: m_Name
       value: Fan
+      objectReference: {fileID: 0}
+    - target: {fileID: 757487564676249960, guid: 8b6d4ac8188d52b45a5ae451860c685b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4418745915110494073, guid: 8b6d4ac8188d52b45a5ae451860c685b, type: 3}
       propertyPath: fanStrength

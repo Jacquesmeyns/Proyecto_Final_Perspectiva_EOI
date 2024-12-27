@@ -551,7 +551,14 @@ MonoBehaviour:
   topCameraPosition: {x: 0, y: 10, z: 3}
   currentGravityChanger: {fileID: 931828552}
   currentCheckpoint: {fileID: 3782205405105815507}
+  timer: {fileID: 0}
   onUILoad:
+    m_PersistentCalls:
+      m_Calls: []
+  onTimerEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  onGoalEnd:
     m_PersistentCalls:
       m_Calls: []
   scoreText: {fileID: 0}

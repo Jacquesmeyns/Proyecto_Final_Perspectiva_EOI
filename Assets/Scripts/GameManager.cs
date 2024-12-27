@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using TMPro;
+using UI;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
@@ -18,8 +19,11 @@ public class GameManager : MonoBehaviour
     private GravityChanger lastGravityChanger;
     public GravityChanger currentGravityChanger;
     public CheckpointController currentCheckpoint;
+    public Timer timer;
 
     public UnityEvent onUILoad;
+    public UnityEvent onTimerEnd;
+    public UnityEvent<Transform> onGoalEnd;
     
     // public InputActionReference escapeButtonAction;
 
@@ -49,7 +53,16 @@ public class GameManager : MonoBehaviour
         newGravityDirection = Auxiliar.Round(newGravityDirection);
         GravityController.ChangeGravityDirection(newGravityDirection);
         onUILoad  = new UnityEvent();
+        onTimerEnd = new UnityEvent();
+        onGoalEnd = new UnityEvent<Transform>();
         onUILoad.AddListener(SetUp);
+        onTimerEnd.AddListener(EndGameByTimer);
+        onGoalEnd.AddListener(EndLevel);
+    }
+
+    private void EndGameByTimer()
+    {
+        LoseGame();
     }
 
     private void SetUp()
@@ -199,6 +212,9 @@ public class GameManager : MonoBehaviour
     
     IEnumerator EndLevelCoroutine(Transform goal)
     {
+        DisablePlayer();
+        timer.StopTimer();
+        AddTimerScore();
         //deactivate camera lookat
         cameraController.vcam.Follow = goal;
         cameraController.LockToTarget.Damping = 3f;
@@ -209,6 +225,12 @@ public class GameManager : MonoBehaviour
         
         //load next level
         LoadNextLevel();
+    }
+
+    private void AddTimerScore()
+    {
+        //TODO un tweening guapo que vaya sumando y restando poco a poco de uno al otro
+        UpdateScore(timer.CurrentTimer*10);
     }
 
     public bool CanChangeGravity()

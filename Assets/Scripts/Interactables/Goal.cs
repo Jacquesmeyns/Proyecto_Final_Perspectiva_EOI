@@ -20,8 +20,7 @@ public class Goal : MonoBehaviour
         {
             audioSource.Play();
             particleSystem.Play();
-            gameManager.EndLevel(transform);
-            gameManager.DisablePlayer();
+            gameManager.onGoalEnd.Invoke(transform);
             GetComponent<BoxCollider>().enabled = false;
         }
     }
