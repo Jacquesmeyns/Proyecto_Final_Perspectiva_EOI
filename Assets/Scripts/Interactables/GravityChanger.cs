@@ -1,14 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using DG.Tweening;
+using Interactables;
+using Interactables.Hidables;
+using NaughtyAttributes;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 using UnityEngine.Splines;
 
-public class GravityChanger : HidableObject
+public class GravityChanger : HidableMaterial
 {
     [SerializeField] GameManager gameManager;
     [SerializeField] GameObject iconGO;
@@ -29,7 +33,9 @@ public class GravityChanger : HidableObject
 
     private float colorChangeTime = 1.5f;
 
-    [SerializeField] private List<HidableObject> objectsToHide;
+    [SerializeReference]
+    [ValidateInput("IsIHidableObject", "the component must extend from IHidableObject")]
+    private List<Component> objectsToHide;
     [SerializeField] private List<Renderer> UberFXRenderersList;
     [SerializeField] public bool flipMovement = false;
     [SerializeField, Tooltip("Forces previous rotation to be kept")] public bool forceMaintainRotation;
@@ -53,7 +59,8 @@ public class GravityChanger : HidableObject
         {
             foreach (var objectToHide in objectsToHide)
             {
-                objectToHide.Hide();
+                var a = objectToHide.gameObject.GetComponent(typeof(IHidableObject));
+                ((IHidableObject)a).Hide();
             }
         }
         if(!Active)
@@ -104,7 +111,7 @@ public class GravityChanger : HidableObject
     {
         foreach (var hiddenObject in objectsToHide)
         {
-            hiddenObject.Appear();
+            ((IHidableObject)hiddenObject).Appear();
         }
     }
 
@@ -112,7 +119,7 @@ public class GravityChanger : HidableObject
     {
         foreach (var hiddenObject in objectsToHide.Where(hiddenObject => hiddenObject!=null))
         {
-            hiddenObject.Disappear();
+            ((IHidableObject)hiddenObject).Disappear();
         }
     }
 
@@ -209,5 +216,19 @@ public class GravityChanger : HidableObject
         ShowHiddenObjects();
         Disappear();
         PlaySFX();
+    }
+    
+    private bool IsIHidableObject(List<Component> components)
+    {
+        bool didRemove = false;
+        for (int i = 0; i < components.Count; i++)
+        {
+            if(components[i] != null && !(components[i] is IHidableObject))
+            {
+                components.RemoveAt(i);
+                didRemove = true;
+            }
+        }
+        return !didRemove;
     }
 }

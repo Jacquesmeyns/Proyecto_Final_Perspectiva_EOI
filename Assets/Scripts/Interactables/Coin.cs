@@ -1,10 +1,12 @@
 using System;
 using DG.Tweening;
+using Interactables;
+using Interactables.Hidables;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Serialization;
 
-public class Coin : HidableObject
+public class Coin : HidableMaterial
 {
     [SerializeField] private int value = 1;
     [SerializeField] GameObject coinModel;

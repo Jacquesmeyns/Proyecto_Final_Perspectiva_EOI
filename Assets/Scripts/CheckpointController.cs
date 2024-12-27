@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using Interactables.Hidables;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class CheckpointController : HidableObject
+public class CheckpointController : HidableGameObject
 {
     [SerializeField] public Mesh gizmoMesh;
     [SerializeField] GameManager gameManager;
@@ -50,21 +51,7 @@ public class CheckpointController : HidableObject
     
     #region HiddableOverrides
 
-    public override void Appear()
-    {
-        gameObject.SetActive(true);
-    }
-
-    public override void Disappear()
-    {
-        gameObject.SetActive(false);
-    }
-
-    [ContextMenu("Hide Object")]
-    public override void Hide()
-    {
-        gameObject.SetActive(false);
-    }
+    
 
     #endregion
 }

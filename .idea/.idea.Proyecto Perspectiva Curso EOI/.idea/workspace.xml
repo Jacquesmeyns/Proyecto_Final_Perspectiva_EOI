@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hazards/Meshes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Hidables.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Hidables/HidableGameObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Hidables/HidableGameObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Hidables/HidableMaterial.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Hidables/HidableMaterial.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Hidables/HidableMeshes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Hidables/HidableMeshes.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Hidables/IHidableObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheckpointController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CheckpointController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hazards/Spikes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hazards/Spikes.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hazards/Meshes.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/Coin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Coin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/HidableObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/HidableObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Hidables/IHidableObject.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,21 +46,16 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Fonts/hexatus/hexatus SDF.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Prefabs/Interactables/Checkpoint.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Prefabs/UI/Canvas.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Prefabs/UI/Canvas.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Prefabs/Interactables/Coin.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/CheckpointController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/DamageOnTriggerEnter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/Interactables/GravityChanger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/Interactables/Coin.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/Interactables/Coin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactables/HidableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/UI/PauseMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine/Runtime/Core/CameraState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core/Runtime/Debugging/DebugManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -59,24 +71,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.36064115",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.36064115&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/TestBuildEOI\Proyecto final Curso EOI.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Build Perspective EOI\Proyecto final Curso EOI.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\jack_\Desktop\TestBuildEOI" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -109,10 +121,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19684">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5368">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="19684" />
+      <option name="pid" value="5368" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -139,70 +151,9 @@
       <workItem from="1734259320758" duration="21198000" />
       <workItem from="1734341330453" duration="26522000" />
       <workItem from="1734428978645" duration="9804000" />
-    </task>
-    <task id="LOCAL-00001" summary="Gitignore commit">
-      <option name="closed" value="true" />
-      <created>1732966869075</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1732966869075</updated>
-    </task>
-    <task id="LOCAL-00002" summary="First commit">
-      <option name="closed" value="true" />
-      <created>1732966895007</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1732966895007</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Debug arrow gizmo added to GravityChanger.cs">
-      <option name="closed" value="true" />
-      <created>1732976047450</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1732976047450</updated>
-    </task>
-    <task id="LOCAL-00004" summary="- Arrow model added&#10;- DrawGizmo on GravityChanger.prefab children added&#10;- Mobile Wall.prefab created&#10;- Made flippable constraints when gravity doesnt change but camera angle does. To be tweaked.&#10;- Tweaked CameraController.cs distanceOffset and NearClipPlane values. To be tweaked and tested even more.&#10;- GravityController.cs now has only one generic method.&#10;- Created Auxiliar.cs class for auxiliar static methods.">
-      <option name="closed" value="true" />
-      <created>1732997645684</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1732997645684</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Level 1 created, not finished.">
-      <option name="closed" value="true" />
-      <created>1733754919706</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1733754919706</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Small player color change testing.">
-      <option name="closed" value="true" />
-      <created>1733755615268</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1733755615268</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Added spike and damage.">
-      <option name="closed" value="true" />
-      <created>1733764358267</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1733764358267</updated>
-    </task>
-    <task id="LOCAL-00008" summary="All VFX now working properly">
-      <option name="closed" value="true" />
-      <created>1733939219617</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1733939219617</updated>
+      <workItem from="1734511372487" duration="34437000" />
+      <workItem from="1734864037163" duration="5940000" />
+      <workItem from="1735295902662" duration="4170000" />
     </task>
     <task id="LOCAL-00009" summary="VFX Materials fixed.">
       <option name="closed" value="true" />
@@ -492,7 +443,111 @@
       <option name="project" value="LOCAL" />
       <updated>1734480912791</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Cleaning a bit of code">
+      <option name="closed" value="true" />
+      <created>1734513082232</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1734513082232</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Checkpoint VFX tweaked.">
+      <option name="closed" value="true" />
+      <created>1734525585458</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1734525585458</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Code cleansing.">
+      <option name="closed" value="true" />
+      <created>1734525656962</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1734525656962</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Code cleansing 2 lmao">
+      <option name="closed" value="true" />
+      <created>1734525667102</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1734525667102</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Adjusted gravityChanger VFX.">
+      <option name="closed" value="true" />
+      <created>1734527930768</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1734527930768</updated>
+    </task>
+    <task id="LOCAL-00050" summary="- Made GravityChanger inherit from HiddableObject and fixed time values.">
+      <option name="closed" value="true" />
+      <created>1734528506941</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1734528506942</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Fixed checkpoints visualization: inherits from HiddableObject">
+      <option name="closed" value="true" />
+      <created>1734530659280</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1734530659280</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Upgraded GravityChanger.prefab vfx">
+      <option name="closed" value="true" />
+      <created>1734545905573</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1734545905573</updated>
+    </task>
+    <task id="LOCAL-00053" summary="- Coin VFX and model upgraded&#10;- Tried to set a new player trail but failed miserably&#10;- New vfx trail package added">
+      <option name="closed" value="true" />
+      <created>1734549100609</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1734549100609</updated>
+    </task>
+    <task id="LOCAL-00054" summary="- Tweaking saw lineRenderer material depth&#10;- Player trail color now matches ball color">
+      <option name="closed" value="true" />
+      <created>1734551509308</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1734551509308</updated>
+    </task>
+    <task id="LOCAL-00055" summary="- Fixed goal VFX (still broken but not as noticeable)">
+      <option name="closed" value="true" />
+      <created>1734553428870</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1734553428870</updated>
+    </task>
+    <task id="LOCAL-00056" summary="- Sfx added to Key and Coin">
+      <option name="closed" value="true" />
+      <created>1734557342998</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1734557342998</updated>
+    </task>
+    <task id="LOCAL-00057" summary="- SFX added&#10;- Added invisible walls to levels">
+      <option name="closed" value="true" />
+      <created>1734568328996</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1734568328996</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,19 +589,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Created player prefab" />
-    <MESSAGE value="- Basic saw created&#10;- Fixed physics bug by resetting rigidBody after tweening position." />
-    <MESSAGE value="Scene was missing" />
-    <MESSAGE value="-Instanced material created&#10;-Still cant change shader var: TBC&#10;&#10;This is basically a sanity commit" />
-    <MESSAGE value="Coins appear and disappear. Shader working correctly and individually." />
-    <MESSAGE value="- Created parent class HidableObject.cs.&#10;- Coin and Spike inherit from it.&#10;- Floor material is now unlit.&#10;- Now objects from other perspectives are not visible if player is not in the correct perspective.&#10;- Saw prefab created." />
-    <MESSAGE value="- Fan script and prefab created." />
-    <MESSAGE value="- Pause menu added" />
-    <MESSAGE value="- Tried to fix the missing input bug, failed." />
-    <MESSAGE value="FIXED CAMERA AUTOMATIC ORIENTATION" />
-    <MESSAGE value="- Fixed automatic constraints" />
-    <MESSAGE value="- Movement direction is now dependant of the GravityChanger and can be flipped if needed." />
-    <MESSAGE value="Fixed minor issue with auto constraints." />
     <MESSAGE value="Fixed various material rendering issues" />
     <MESSAGE value="- Level 2 creation, unfinished." />
     <MESSAGE value="- Bugfixed saw movement.&#10;- Finished level2 (lacks end point)" />
@@ -559,49 +601,36 @@
     <MESSAGE value="- Basic lose menu created." />
     <MESSAGE value="- Material tweaking&#10;- Changed VFX in GravityChanger.prefab&#10;- Added coins to lvl 3" />
     <MESSAGE value="- Added new level (lvl4)&#10;- Updated saw and fan visuals&#10;- Maybe broke GravityChanger visuals (wrongly disappears, bad management)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added new level (lvl4)&#10;- Updated saw and fan visuals&#10;- Maybe broke GravityChanger visuals (wrongly disappears, bad management)" />
+    <MESSAGE value="Cleaning a bit of code" />
+    <MESSAGE value="Checkpoint VFX tweaked." />
+    <MESSAGE value="Code cleansing." />
+    <MESSAGE value="Code cleansing 2 lmao" />
+    <MESSAGE value="Adjusted gravityChanger VFX." />
+    <MESSAGE value="- Made GravityChanger inherit from HiddableObject and fixed time values." />
+    <MESSAGE value="Fixed checkpoints visualization: inherits from HiddableObject" />
+    <MESSAGE value="Upgraded GravityChanger.prefab vfx" />
+    <MESSAGE value="- Coin VFX and model upgraded&#10;- Tried to set a new player trail but failed miserably&#10;- New vfx trail package added" />
+    <MESSAGE value="- Tweaking saw lineRenderer material depth&#10;- Player trail color now matches ball color" />
+    <MESSAGE value="- Fixed goal VFX (still broken but not as noticeable)" />
+    <MESSAGE value="- Sfx added to Key and Coin" />
+    <MESSAGE value="- SFX added&#10;- Added invisible walls to levels" />
+    <option name="LAST_COMMIT_MESSAGE" value="- SFX added&#10;- Added invisible walls to levels" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs</url>
-          <line>116</line>
-          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\Interactables\GravityChanger.cs" containingFunctionPresentation="Method 'HideUberFXMaterials'">
+          <line>59</line>
+          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\Interactables\GravityChanger.cs" containingFunctionPresentation="Method 'Start'">
             <startOffsets>
-              <option value="3818" />
+              <option value="2002" />
             </startOffsets>
             <endOffsets>
-              <option value="3863" />
+              <option value="2045" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs</url>
-          <line>125</line>
-          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\Interactables\GravityChanger.cs" containingFunctionPresentation="Method 'AppearUberFXMaterials'">
-            <startOffsets>
-              <option value="4066" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4111" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="73" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs</url>
-          <line>147</line>
-          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\Interactables\GravityChanger.cs" containingFunctionPresentation="Method 'DisappearUberFXMaterials'">
-            <startOffsets>
-              <option value="4726" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4771" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="74" />
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
