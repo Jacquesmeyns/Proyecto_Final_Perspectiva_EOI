@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Fan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Fan.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -497,7 +497,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734480912791</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Upgraded Fan VFX">
+      <option name="closed" value="true" />
+      <created>1735303083312</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1735303083312</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +547,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Created player prefab" />
     <MESSAGE value="- Basic saw created&#10;- Fixed physics bug by resetting rigidBody after tweening position." />
     <MESSAGE value="Scene was missing" />
     <MESSAGE value="-Instanced material created&#10;-Still cant change shader var: TBC&#10;&#10;This is basically a sanity commit" />
@@ -564,6 +571,7 @@
     <MESSAGE value="- Basic lose menu created." />
     <MESSAGE value="- Material tweaking&#10;- Changed VFX in GravityChanger.prefab&#10;- Added coins to lvl 3" />
     <MESSAGE value="- Added new level (lvl4)&#10;- Updated saw and fan visuals&#10;- Maybe broke GravityChanger visuals (wrongly disappears, bad management)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added new level (lvl4)&#10;- Updated saw and fan visuals&#10;- Maybe broke GravityChanger visuals (wrongly disappears, bad management)" />
+    <MESSAGE value="Upgraded Fan VFX" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgraded Fan VFX" />
   </component>
 </project>
