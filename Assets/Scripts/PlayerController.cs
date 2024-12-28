@@ -126,6 +126,7 @@ public class PlayerController : MonoBehaviour
     public void DisableMoveInput()
     {
         moveAction.action.Disable();
+        jumpAction.action.Disable();
     }
 
     private void ChargeJump(InputAction.CallbackContext ctx)

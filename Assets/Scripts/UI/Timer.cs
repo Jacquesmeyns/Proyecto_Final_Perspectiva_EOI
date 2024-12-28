@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -45,6 +46,13 @@ namespace UI
         public void StopTimer()
         {
             StopCoroutine(timerCoroutine);
+        }
+
+        public void ScoreTimeEffect(int quantity, float effectDuration, float strength)
+        {
+            timerData.transform.DOShakePosition(effectDuration, strength);
+            currentTimer -= quantity;
+            timerData.text = currentTimer.ToString();
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using DG.Tweening;
 using TMPro;
 using UI;
 using Unity.Cinemachine;
@@ -207,19 +208,16 @@ public class GameManager : MonoBehaviour
 
     public void EndLevel(Transform goal)
     {
-        StartCoroutine(EndLevelCoroutine(goal));
-    }
-    
-    IEnumerator EndLevelCoroutine(Transform goal)
-    {
         DisablePlayer();
         timer.StopTimer();
         AddTimerScore();
         //deactivate camera lookat
         cameraController.vcam.Follow = goal;
         cameraController.LockToTarget.Damping = 3f;
-        //deactivate playerinput
-        //player.playerInputSystem.DeactivateInput();
+    }
+    
+    IEnumerator EndLevelCoroutine()
+    {
         yield return new WaitForSeconds(3f);
         //Fadeout negro to next level
         
@@ -229,8 +227,26 @@ public class GameManager : MonoBehaviour
 
     private void AddTimerScore()
     {
-        //TODO un tweening guapo que vaya sumando y restando poco a poco de uno al otro
+        StartCoroutine(TimerToScore());
+    }
+
+    IEnumerator TimerToScore()
+    {
+        float effectDuration = 0.05f;
+        float strength = 2f;
+        while (timer.CurrentTimer >= 10)
+        {
+            timer.ScoreTimeEffect(10, effectDuration, strength);
+            UpdateScore(100);   //For each second, 10 points
+            scoreText.transform.DOShakePosition(effectDuration, strength);
+            yield return new WaitForSeconds(effectDuration);
+        }
         UpdateScore(timer.CurrentTimer*10);
+        timer.ScoreTimeEffect(timer.CurrentTimer, effectDuration, strength);
+        scoreText.transform.DOShakePosition(effectDuration, strength);
+        
+        //At the end of the time score calculation, the level ends
+        StartCoroutine(EndLevelCoroutine());
     }
 
     public bool CanChangeGravity()
