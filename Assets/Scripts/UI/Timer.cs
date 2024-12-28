@@ -13,15 +13,15 @@ namespace UI
         [SerializeField] private int totalTimer = 400;    //Seconds
         private int currentTimer;
         public int CurrentTimer => currentTimer;
-        private GameManager gameManager;
+        [SerializeField] UIManager UIManager;
         private IEnumerator timerCoroutine;
 
-        private void Awake()
+        private void Start()
         {
             currentTimer = totalTimer;
             timerData.text = currentTimer.ToString();
-            gameManager = FindObjectOfType<GameManager>();  //jsjs
-            gameManager.timer = this;
+            
+            UIManager.GameManager.timer = this;
             timerCoroutine = TimerCoroutine();
             StartTimer();
         }
@@ -40,7 +40,7 @@ namespace UI
                 currentTimer--;
                 timerData.text = currentTimer.ToString();
             }
-            gameManager.onTimerEnd.Invoke();
+            UIManager.GameManager.onTimerEnd.Invoke();
         }
 
         public void StopTimer()

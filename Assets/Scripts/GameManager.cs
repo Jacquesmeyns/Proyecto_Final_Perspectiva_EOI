@@ -22,9 +22,13 @@ public class GameManager : MonoBehaviour
     public CheckpointController currentCheckpoint;
     public Timer timer;
 
+    #region UnityEvents
+    
     public UnityEvent onUILoad;
     public UnityEvent onTimerEnd;
     public UnityEvent<Transform> onGoalEnd;
+    
+    #endregion
     
     // public InputActionReference escapeButtonAction;
 
@@ -32,8 +36,10 @@ public class GameManager : MonoBehaviour
     
     [HideInInspector] public TextMeshProUGUI scoreText;
     
-    [HideInInspector] public GameObject PauseMenuUI;
-    [HideInInspector] public GameObject LoseMenuUI;
+    public UIManager _UIManager;
+    
+    // [HideInInspector] public GameObject PauseMenuUI;
+    // [HideInInspector] public GameObject LoseMenuUI;
     
     #endregion
     private float totalScore = 0 ;
@@ -165,7 +171,8 @@ public class GameManager : MonoBehaviour
     {
         gamePaused = true;
         Time.timeScale = 0;
-        PauseMenuUI.gameObject.SetActive(true);
+        _UIManager.ShowPauseMenu();
+        // PauseMenuUI.gameObject.SetActive(true);
     }
     
     public void LoseGame()
@@ -173,15 +180,18 @@ public class GameManager : MonoBehaviour
         //TODO coroutine para dar un poco de respiro
         gamePaused = true;
         Time.timeScale = 0;
-        LoseMenuUI.gameObject.SetActive(true);
+        _UIManager.ShowLoseMenu();
+        // LoseMenuUI.gameObject.SetActive(true);
     }
     
     public void ResumeGame()
     {
         gamePaused = false;
         Time.timeScale = 1;
-        PauseMenuUI.gameObject.SetActive(false);
-        LoseMenuUI.gameObject.SetActive(false);
+        _UIManager.HidePauseMenu();
+        _UIManager.HideLoseMenu();
+        // PauseMenuUI.gameObject.SetActive(false);
+        // LoseMenuUI.gameObject.SetActive(false);
     }
 
     public void ReturnToMainMenu()
@@ -218,7 +228,9 @@ public class GameManager : MonoBehaviour
     
     IEnumerator EndLevelCoroutine()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
+        _UIManager.TransitionSlider.onLevelUnload.Invoke();
+        yield return new WaitForSeconds(2f);
         //Fadeout negro to next level
         
         //load next level

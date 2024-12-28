@@ -1,37 +1,35 @@
 using System;
 using TMPro;
+using UI;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private GameManager gameManager;
+    [SerializeField] private UIManager _UIManager;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private GameObject loseMenu;
     
     private void Start()
     {
-        if(gameManager == null)
-            throw new ArgumentNullException("gameManager");
-        gameManager.PauseMenuUI = gameObject;
-        gameManager.LoseMenuUI = loseMenu;
-        gameManager.scoreText = scoreText;
+        _UIManager.GameManager.scoreText = scoreText;
         gameObject.SetActive(false);
         loseMenu.SetActive(false);
-        gameManager.onUILoad.Invoke();
+        _UIManager.GameManager.onUILoad.Invoke();
     }
     
     public void RestartGame()
     {
-        gameManager.RestartGame();
+        _UIManager.GameManager.RestartGame();
     }
 
     public void ReturnToMainMenu()
     {
-        gameManager.ReturnToMainMenu();
+        _UIManager.GameManager.ReturnToMainMenu();
     }
 
     public void Resume()
     {
-        gameManager.ResumeGame();
+        _UIManager.GameManager.ResumeGame();
     }
 }
