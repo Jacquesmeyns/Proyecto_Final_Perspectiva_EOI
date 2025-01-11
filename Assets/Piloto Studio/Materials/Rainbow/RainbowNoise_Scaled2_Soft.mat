@@ -198,7 +198,7 @@ Material:
     - _DistortionDepthTest: 1
     - _DistortionDstBlend: 1
     - _DistortionEnable: 0
-    - _DistortionIntensity: 1.08
+    - _DistortionIntensity: 0.8
     - _DistortionOnly: 0
     - _DistortionScale: 1
     - _DistortionSrcBlend: 1

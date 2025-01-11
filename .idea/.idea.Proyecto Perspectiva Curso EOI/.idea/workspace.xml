@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="Timer score effects added.">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TransitionSlider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TransitionSlider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs.meta" afterDir="false" />
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Timer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,21 +54,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.48573974",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.48573974&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Desktop/Build Perspective EOI\Proyecto final Curso EOI.exe" />
@@ -112,10 +104,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="24184">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="24184" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -142,15 +134,8 @@
       <workItem from="1734259320758" duration="21198000" />
       <workItem from="1734341330453" duration="26522000" />
       <workItem from="1734428978645" duration="9804000" />
-      <workItem from="1735339468172" duration="8737000" />
-    </task>
-    <task id="LOCAL-00001" summary="Gitignore commit">
-      <option name="closed" value="true" />
-      <created>1732966869075</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1732966869075</updated>
+      <workItem from="1735339468172" duration="8822000" />
+      <workItem from="1735388040836" duration="806000" />
     </task>
     <task id="LOCAL-00002" summary="First commit">
       <option name="closed" value="true" />
@@ -536,7 +521,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735345036215</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Added transition effects when loading and exiting a level.&#10;&#10;Improved UI logic.">
+      <option name="closed" value="true" />
+      <created>1735348620674</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1735348620674</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +571,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="- Created parent class HidableObject.cs.&#10;- Coin and Spike inherit from it.&#10;- Floor material is now unlit.&#10;- Now objects from other perspectives are not visible if player is not in the correct perspective.&#10;- Saw prefab created." />
     <MESSAGE value="- Fan script and prefab created." />
     <MESSAGE value="- Pause menu added" />
     <MESSAGE value="- Tried to fix the missing input bug, failed." />
@@ -603,7 +595,8 @@
     <MESSAGE value="lmao forgot to save level 5" />
     <MESSAGE value="Basic timer working: adds score when ending level and player dies when time runs out," />
     <MESSAGE value="Timer score effects added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Timer score effects added." />
+    <MESSAGE value="Added transition effects when loading and exiting a level.&#10;&#10;Improved UI logic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added transition effects when loading and exiting a level.&#10;&#10;Improved UI logic." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
