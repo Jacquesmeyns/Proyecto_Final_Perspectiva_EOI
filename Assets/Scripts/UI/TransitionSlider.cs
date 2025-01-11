@@ -40,6 +40,7 @@ namespace UI
 
         private IEnumerator StartLevelTransitionCoroutine()
         {
+            yield return new WaitForSeconds(0.2f);
             foreach (var image in transitionImages)
             {
                 image.transform.DOLocalMoveY(lowHeigthPos, 1f).SetEase(Ease.Linear);
