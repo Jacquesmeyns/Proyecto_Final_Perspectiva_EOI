@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="">
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="TODOs fixing:&#10;- CameraController.cs TODO was already fixed in a previous commit.&#10;- GameManager.cs given a small ending moment for the player death.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PlayerObjectMaterial 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PlayerObjectMaterial 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TransitionSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TransitionSlider.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +40,13 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Fonts/hexatus/hexatus SDF.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Fonts/hexatus/hexatus SDF.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/DamageOnTriggerEnter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactables/HidableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ButtonUiController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine/Runtime/Components/CinemachineBasicMultiChannelPerlin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core/Runtime/Debugging/DebugManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -136,22 +144,8 @@
       <workItem from="1734428978645" duration="9804000" />
       <workItem from="1735339468172" duration="8822000" />
       <workItem from="1735388040836" duration="806000" />
-    </task>
-    <task id="LOCAL-00002" summary="First commit">
-      <option name="closed" value="true" />
-      <created>1732966895007</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1732966895007</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Debug arrow gizmo added to GravityChanger.cs">
-      <option name="closed" value="true" />
-      <created>1732976047450</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1732976047450</updated>
+      <workItem from="1736620287521" duration="3704000" />
+      <workItem from="1737398960065" duration="7593000" />
     </task>
     <task id="LOCAL-00004" summary="- Arrow model added&#10;- DrawGizmo on GravityChanger.prefab children added&#10;- Mobile Wall.prefab created&#10;- Made flippable constraints when gravity doesnt change but camera angle does. To be tweaked.&#10;- Tweaked CameraController.cs distanceOffset and NearClipPlane values. To be tweaked and tested even more.&#10;- GravityController.cs now has only one generic method.&#10;- Created Auxiliar.cs class for auxiliar static methods.">
       <option name="closed" value="true" />
@@ -529,7 +523,23 @@
       <option name="project" value="LOCAL" />
       <updated>1735348620674</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Cleaner transition from Menu to Game.">
+      <option name="closed" value="true" />
+      <created>1736621225828</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1736621225828</updated>
+    </task>
+    <task id="LOCAL-00052" summary="-Added scaling to Main Menu buttons on hover events.&#10;-Added a small delay in the slide transition when entering a new level to let a bit of breathing in between scenes.">
+      <option name="closed" value="true" />
+      <created>1736622977443</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1736622977443</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -571,9 +581,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="- Fan script and prefab created." />
-    <MESSAGE value="- Pause menu added" />
-    <MESSAGE value="- Tried to fix the missing input bug, failed." />
     <MESSAGE value="FIXED CAMERA AUTOMATIC ORIENTATION" />
     <MESSAGE value="- Fixed automatic constraints" />
     <MESSAGE value="- Movement direction is now dependant of the GravityChanger and can be flipped if needed." />
@@ -596,20 +603,23 @@
     <MESSAGE value="Basic timer working: adds score when ending level and player dies when time runs out," />
     <MESSAGE value="Timer score effects added." />
     <MESSAGE value="Added transition effects when loading and exiting a level.&#10;&#10;Improved UI logic." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added transition effects when loading and exiting a level.&#10;&#10;Improved UI logic." />
+    <MESSAGE value="Cleaner transition from Menu to Game." />
+    <MESSAGE value="-Added scaling to Main Menu buttons on hover events.&#10;-Added a small delay in the slide transition when entering a new level to let a bit of breathing in between scenes." />
+    <MESSAGE value="TODOs fixing:&#10;- CameraController.cs TODO was already fixed in a previous commit.&#10;- GameManager.cs given a small ending moment for the player death." />
+    <option name="LAST_COMMIT_MESSAGE" value="TODOs fixing:&#10;- CameraController.cs TODO was already fixed in a previous commit.&#10;- GameManager.cs given a small ending moment for the player death." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
-          <line>250</line>
+          <line>266</line>
           <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\GameManager.cs" containingFunctionPresentation="Method 'TimerToScore'">
             <startOffsets>
-              <option value="7746" />
+              <option value="8302" />
             </startOffsets>
             <endOffsets>
-              <option value="7798" />
+              <option value="8354" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />

@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public GravityChanger currentGravityChanger;
     public CheckpointController currentCheckpoint;
     public Timer timer;
+    private IEnumerator LoseCoroutine = null;
 
     #region UnityEvents
     
@@ -177,11 +178,26 @@ public class GameManager : MonoBehaviour
     
     public void LoseGame()
     {
-        //TODO coroutine para dar un poco de respiro
+        if(LoseCoroutine != null) return;
+        LoseCoroutine = LoseGameCoroutine();
+        StartCoroutine(LoseCoroutine);
+    }
+
+    IEnumerator LoseGameCoroutine()
+    {
+        //Small player pause before dying
+        player.DisablePlayer();
+        player.Fade();
+        yield return new WaitForSeconds(player.ColorFadeTime + 0.2f);
+        
+        //slide transition to LoseMenuScene
+        _UIManager.TransitionSlider.onLevelUnload.Invoke();
+        yield return new WaitForSeconds(_UIManager.TransitionSlider.TotalTransitionTime);
         gamePaused = true;
         Time.timeScale = 0;
         _UIManager.ShowLoseMenu();
-        // LoseMenuUI.gameObject.SetActive(true);
+        StopCoroutine(LoseCoroutine);
+        LoseCoroutine = null;
     }
     
     public void ResumeGame()

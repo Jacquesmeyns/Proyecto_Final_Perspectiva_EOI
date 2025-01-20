@@ -15,6 +15,19 @@ namespace UI
         private float midHeigthPos = 0;     //Covering all canvas
         private float lowHeigthPos = -500;     //Out of canvas from below
         
+        #region Timing
+
+        private float startDelay = 0.2f;
+        private float timePerSection = 0.25f;
+        private float translationTime = 1f;
+        
+        public float StartDelay => startDelay;
+        public float TimePerSection => timePerSection;
+        public float TranslationTime => translationTime;
+        
+        public float TotalTransitionTime => (transitionImages.Length-1)*timePerSection + startDelay + translationTime;
+        #endregion
+        
         public UnityEvent onLevelLoad;
         public UnityEvent onLevelUnload;
 
@@ -40,11 +53,11 @@ namespace UI
 
         private IEnumerator StartLevelTransitionCoroutine()
         {
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(startDelay);
             foreach (var image in transitionImages)
             {
-                image.transform.DOLocalMoveY(lowHeigthPos, 1f).SetEase(Ease.Linear);
-                yield return new WaitForSeconds(0.25f);
+                image.transform.DOLocalMoveY(lowHeigthPos, translationTime).SetEase(Ease.Linear);
+                yield return new WaitForSeconds(timePerSection);
             }
         }
         
@@ -63,8 +76,8 @@ namespace UI
         {
             foreach (var image in transitionImages)
             {
-                image.transform.DOLocalMoveY(midHeigthPos, 1f).SetEase(Ease.Linear);
-                yield return new WaitForSeconds(0.25f);
+                image.transform.DOLocalMoveY(midHeigthPos, translationTime).SetEase(Ease.Linear);
+                yield return new WaitForSeconds(timePerSection);
             }
         }
     }

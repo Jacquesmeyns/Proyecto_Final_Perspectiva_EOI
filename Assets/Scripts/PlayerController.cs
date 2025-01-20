@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private const int MaxHealth = 3;
     private int healthPoints;
     public int HealthPoints => healthPoints;
+    public bool IsDead => healthPoints <= 0;
 
     #endregion
 
@@ -49,6 +50,8 @@ public class PlayerController : MonoBehaviour
 
     private Material playerMaterial;
     [SerializeField] private float colorChangeTime = 2;
+    [SerializeField] private float colorFadeTime = 1.5f;
+    public float ColorFadeTime => colorFadeTime;
     
     [SerializeField] private TrailRenderer trailRenderer;
     #endregion
@@ -59,6 +62,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip chargeJumpSfx;
     [SerializeField] private AudioClip releaseJumpSfx;
     [SerializeField] private AudioSource audioSource;
+    
 
     #endregion
 
@@ -121,6 +125,16 @@ public class PlayerController : MonoBehaviour
     {
         rb.AddForce(GravityController.Gravity * rb.mass);
         rb.AddForce(moveDirection * Speed);
+    }
+
+    /// <summary>
+    /// Use only when the player dies
+    /// </summary>
+    public void DisablePlayer()
+    {
+        DisableMoveInput();
+        rb.isKinematic = true;
+        sphereCollider.enabled = false;
     }
 
     public void DisableMoveInput()
@@ -290,6 +304,7 @@ public class PlayerController : MonoBehaviour
                     ChangePlayerMaterialBlue();
                     break;
             }
+
         }
         else{
             gameManager.LoseGame();
@@ -298,16 +313,39 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage()
     {
-        gameManager.DoCameraShake();
+        
         audioSource.PlayOneShot(damageSfx);
         LoseHealth();
         UpdateHealthStatus();
-        Teleport(gameManager.currentCheckpoint.SpawnPosition);
+        if (!IsDead)
+        {
+            Teleport(gameManager.currentCheckpoint.SpawnPosition);
+            gameManager.DoCameraShake();
+        }
     }
 
     public void UpdateMovementDirection(Vector3 frozenDirection, Vector3 upDirection, bool flip = false)
     {
         currentAllowedDirection = Vector3.Cross( upDirection, frozenDirection);
         if(flip) currentAllowedDirection *= -1;
+    }
+
+    public void Fade()
+    {
+        Color currentColor = playerMaterial.color;
+        Color invisibleColor = new Color(currentColor.r, currentColor.g, currentColor.b, 0f);
+        DOVirtual.Color(playerMaterial.color, invisibleColor, colorFadeTime, (value) =>
+        {
+            playerMaterial.color = value;
+        });
+
+        DOVirtual.Float(playerMaterial.GetFloat("_Smoothness"), 0, colorFadeTime, (value) =>
+        {
+            playerMaterial.SetFloat("_Smoothness", value);
+        });
+        DOVirtual.Color(playerMaterial.color, invisibleColor, colorFadeTime, (value) =>
+        {
+            trailRenderer.endColor = trailRenderer.startColor = value;
+        });
     }
 }
