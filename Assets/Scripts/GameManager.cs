@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private GravityChanger lastGravityChanger;
     public GravityChanger currentGravityChanger;
     public CheckpointController currentCheckpoint;
-    public Timer timer;
+    [HideInInspector] public Timer timer;
     private IEnumerator LoseCoroutine = null;
 
     #region UnityEvents
