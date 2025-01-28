@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="TODOs fixing:&#10;- CameraController.cs TODO was already fixed in a previous commit.&#10;- GameManager.cs given a small ending moment for the player death.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/PlayerObjectMaterial 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PlayerObjectMaterial 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TransitionSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TransitionSlider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,10 +108,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="38580">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="38580" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -613,13 +609,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
-          <line>266</line>
+          <line>265</line>
           <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\GameManager.cs" containingFunctionPresentation="Method 'TimerToScore'">
             <startOffsets>
-              <option value="8302" />
+              <option value="8310" />
             </startOffsets>
             <endOffsets>
-              <option value="8354" />
+              <option value="8311" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />

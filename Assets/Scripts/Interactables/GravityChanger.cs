@@ -29,7 +29,8 @@ public class GravityChanger : HidableObject
 
     private float colorChangeTime = 1.5f;
 
-    [SerializeField] private List<HidableObject> objectsToHide;
+    [FormerlySerializedAs("objectsToHide")][SerializeField] private List<HidableObject> objectsToShow;
+    [SerializeField] private List<HidableObject> ObjectsToHide;
     [SerializeField] private List<Renderer> UberFXRenderersList;
     [SerializeField] public bool flipMovement = false;
     [SerializeField, Tooltip("Forces previous rotation to be kept")] public bool forceMaintainRotation;
@@ -51,7 +52,7 @@ public class GravityChanger : HidableObject
         //Se comprueba orientación del primer checkpoint y se oculta si no coincide
         if (gameManager.currentCheckpoint.SpawnTransform.localRotation != nextSpawn.localRotation && !forceShow)
         {
-            foreach (var objectToHide in objectsToHide)
+            foreach (var objectToHide in objectsToShow)
             {
                 objectToHide.Hide();
             }
@@ -100,19 +101,35 @@ public class GravityChanger : HidableObject
         PlayCustomVFX();
     }
 
-    public void ShowHiddenObjects()
+    public void ShowObjectsFromShowList()
     {
-        foreach (var hiddenObject in objectsToHide)
+        foreach (var hiddenObject in objectsToShow)
         {
             hiddenObject.Appear();
         }
     }
 
-    public void DisappearHiddableObjects()
+    public void DisappearObjectsFromShowList()
     {
-        foreach (var hiddenObject in objectsToHide.Where(hiddenObject => hiddenObject!=null))
+        foreach (var hiddenObject in objectsToShow.Where(hiddenObject => hiddenObject!=null))
         {
             hiddenObject.Disappear();
+        }
+    }
+    
+    public void ShowObjectsFromHideList()
+    {
+        foreach (var hiddenObject in ObjectsToHide)
+        {
+            hiddenObject.Appear();
+        }
+    }
+
+    public void DisappearObjectsFromHideList()
+    {
+        foreach (var shownObject in ObjectsToHide.Where(hiddenObject => hiddenObject!=null))
+        {
+            shownObject.Disappear();
         }
     }
 
@@ -206,7 +223,8 @@ public class GravityChanger : HidableObject
 
     public void Activate()
     {
-        ShowHiddenObjects();
+        ShowObjectsFromShowList();
+        DisappearObjectsFromHideList();
         Disappear();
         PlaySFX();
     }
