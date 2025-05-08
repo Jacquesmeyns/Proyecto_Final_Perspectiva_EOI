@@ -4,7 +4,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class MoveSaw : MonoBehaviour
+public class MoveSaw : HidableObject
 {
     private Vector3 Start, End;
     [SerializeField] private float moveDistance;
@@ -31,11 +31,38 @@ public class MoveSaw : MonoBehaviour
 
         var StartEnd = End - Start;
         line.SetPositions(new Vector3[]{Start, Start + (StartEnd*0.01f), Start + (StartEnd*0.99f), End});
+        Hide();
     }
 
     private void OnDrawGizmosSelected()
     {
         //Draw expectedEnd
         Gizmos.DrawLine(transform.position, transform.position + moveDistance * transform.right);
+    }
+
+    public override void Appear()
+    {
+        StartCoroutine(DoFunctionAfter(0.5f, Show));
+    }
+
+    public override void Disappear()
+    {
+        Hide();
+    }
+
+    IEnumerator DoFunctionAfter(float time, Action function)
+    {
+        yield return new WaitForSeconds(time);
+        function?.Invoke();
+    }
+    
+    public override void Hide()
+    {
+        line.enabled = false;
+    }
+
+    private void Show()
+    {
+        line.enabled = true;
     }
 }

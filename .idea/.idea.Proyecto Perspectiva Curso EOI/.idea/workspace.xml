@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="TODOs fixing:&#10;- CameraController.cs TODO was already fixed in a previous commit.&#10;- GameManager.cs given a small ending moment for the player death.">
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/GravityChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hazards/MoveSaw.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hazards/MoveSaw.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/FanImpulsor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/FanImpulsor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +37,12 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Fonts/hexatus/hexatus SDF.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/DamageOnTriggerEnter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/Interactables/GravityChanger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactables/HidableObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ButtonUiController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine/Runtime/Components/CinemachineBasicMultiChannelPerlin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
@@ -108,10 +110,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="38580">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="38580" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -142,14 +144,8 @@
       <workItem from="1735388040836" duration="806000" />
       <workItem from="1736620287521" duration="3704000" />
       <workItem from="1737398960065" duration="7593000" />
-    </task>
-    <task id="LOCAL-00004" summary="- Arrow model added&#10;- DrawGizmo on GravityChanger.prefab children added&#10;- Mobile Wall.prefab created&#10;- Made flippable constraints when gravity doesnt change but camera angle does. To be tweaked.&#10;- Tweaked CameraController.cs distanceOffset and NearClipPlane values. To be tweaked and tested even more.&#10;- GravityController.cs now has only one generic method.&#10;- Created Auxiliar.cs class for auxiliar static methods.">
-      <option name="closed" value="true" />
-      <created>1732997645684</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1732997645684</updated>
+      <workItem from="1746520090778" duration="1080000" />
+      <workItem from="1746728423501" duration="1935000" />
     </task>
     <task id="LOCAL-00005" summary="Level 1 created, not finished.">
       <option name="closed" value="true" />
@@ -535,7 +531,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736622977443</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="- Created Structure.cs for hidable walls or grounds.&#10;- Advanced in level 5.&#10;- Cleared some disonances in GravityChanger.cs, now it's clear that there's a list to hide and a list to show when activated.">
+      <option name="closed" value="true" />
+      <created>1738098505751</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1738098505751</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,7 +581,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="FIXED CAMERA AUTOMATIC ORIENTATION" />
     <MESSAGE value="- Fixed automatic constraints" />
     <MESSAGE value="- Movement direction is now dependant of the GravityChanger and can be flipped if needed." />
     <MESSAGE value="Fixed minor issue with auto constraints." />
@@ -602,7 +605,8 @@
     <MESSAGE value="Cleaner transition from Menu to Game." />
     <MESSAGE value="-Added scaling to Main Menu buttons on hover events.&#10;-Added a small delay in the slide transition when entering a new level to let a bit of breathing in between scenes." />
     <MESSAGE value="TODOs fixing:&#10;- CameraController.cs TODO was already fixed in a previous commit.&#10;- GameManager.cs given a small ending moment for the player death." />
-    <option name="LAST_COMMIT_MESSAGE" value="TODOs fixing:&#10;- CameraController.cs TODO was already fixed in a previous commit.&#10;- GameManager.cs given a small ending moment for the player death." />
+    <MESSAGE value="- Created Structure.cs for hidable walls or grounds.&#10;- Advanced in level 5.&#10;- Cleared some disonances in GravityChanger.cs, now it's clear that there's a list to hide and a list to show when activated." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Created Structure.cs for hidable walls or grounds.&#10;- Advanced in level 5.&#10;- Cleared some disonances in GravityChanger.cs, now it's clear that there's a list to hide and a list to show when activated." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class FanImpulsor : MonoBehaviour
+public class FanImpulsor : HidableObject
 {
     [SerializeField] float fanStrength = 1.5f;
     private void OnTriggerStay(Collider other)
