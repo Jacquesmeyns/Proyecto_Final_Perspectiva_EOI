@@ -7,9 +7,9 @@
     <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/hexatus/hexatus SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Spring.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Spring.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hazards/MoveSaw.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hazards/MoveSaw.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/FanImpulsor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/FanImpulsor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/Spring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Spring.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,21 +60,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.48573974&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.36167148",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Desktop/Build Perspective EOI\Proyecto final Curso EOI.exe" />
@@ -110,10 +110,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22168">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="22168" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -145,15 +145,8 @@
       <workItem from="1736620287521" duration="3704000" />
       <workItem from="1737398960065" duration="7593000" />
       <workItem from="1746520090778" duration="1080000" />
-      <workItem from="1746728423501" duration="1935000" />
-    </task>
-    <task id="LOCAL-00005" summary="Level 1 created, not finished.">
-      <option name="closed" value="true" />
-      <created>1733754919706</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1733754919706</updated>
+      <workItem from="1746728423501" duration="3158000" />
+      <workItem from="1747820648914" duration="6579000" />
     </task>
     <task id="LOCAL-00006" summary="Small player color change testing.">
       <option name="closed" value="true" />
@@ -539,7 +532,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738098505751</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Level 5 progress">
+      <option name="closed" value="true" />
+      <created>1746734296475</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1746734296476</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +582,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="- Fixed automatic constraints" />
     <MESSAGE value="- Movement direction is now dependant of the GravityChanger and can be flipped if needed." />
     <MESSAGE value="Fixed minor issue with auto constraints." />
     <MESSAGE value="Fixed various material rendering issues" />
@@ -606,7 +606,8 @@
     <MESSAGE value="-Added scaling to Main Menu buttons on hover events.&#10;-Added a small delay in the slide transition when entering a new level to let a bit of breathing in between scenes." />
     <MESSAGE value="TODOs fixing:&#10;- CameraController.cs TODO was already fixed in a previous commit.&#10;- GameManager.cs given a small ending moment for the player death." />
     <MESSAGE value="- Created Structure.cs for hidable walls or grounds.&#10;- Advanced in level 5.&#10;- Cleared some disonances in GravityChanger.cs, now it's clear that there's a list to hide and a list to show when activated." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Created Structure.cs for hidable walls or grounds.&#10;- Advanced in level 5.&#10;- Cleared some disonances in GravityChanger.cs, now it's clear that there's a list to hide and a list to show when activated." />
+    <MESSAGE value="Level 5 progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Level 5 progress" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -636,6 +637,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Interactables/Spring.cs</url>
+          <line>19</line>
+          <properties documentPath="D:\Unity Projects\Proyecto Perspectiva Curso EOI\Assets\Scripts\Interactables\Spring.cs" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="679" />
+            </startOffsets>
+            <endOffsets>
+              <option value="800" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
