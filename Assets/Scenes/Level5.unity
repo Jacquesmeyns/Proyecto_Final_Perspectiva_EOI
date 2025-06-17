@@ -6840,6 +6840,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36a209cc8e5010f47b1628424cb19bd9, type: 3}
+--- !u!1 &428135363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3315267364343111106, guid: 13f7ad93d35503d4c8313217db6b6030, type: 3}
+  m_PrefabInstance: {fileID: 3586050359275750985}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &435248725
 GameObject:
   m_ObjectHideFlags: 0
@@ -9391,6 +9396,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9059039922535005392, guid: 13f7ad93d35503d4c8313217db6b6030, type: 3}
   m_PrefabInstance: {fileID: 3586050359275750985}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &622567231 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8612641942396520276, guid: 13f7ad93d35503d4c8313217db6b6030, type: 3}
+  m_PrefabInstance: {fileID: 3586050359275750985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428135363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb0a9cf527aa0e42b5b03f0b784c797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &632093532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8139269692997886308, guid: 36a209cc8e5010f47b1628424cb19bd9, type: 3}
@@ -34985,6 +35001,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 76245137941569583, guid: 13f7ad93d35503d4c8313217db6b6030, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3874137173853334052, guid: 13f7ad93d35503d4c8313217db6b6030, type: 3}
       propertyPath: m_Name
       value: PlayerStretch
@@ -35030,9 +35050,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6931664164008848769, guid: 13f7ad93d35503d4c8313217db6b6030, type: 3}
+      propertyPath: shaderGO
+      value: 
+      objectReference: {fileID: 428135363}
+    - target: {fileID: 6931664164008848769, guid: 13f7ad93d35503d4c8313217db6b6030, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 23352387}
+    - target: {fileID: 6931664164008848769, guid: 13f7ad93d35503d4c8313217db6b6030, type: 3}
+      propertyPath: squashStretch
+      value: 
+      objectReference: {fileID: 622567231}
+    - target: {fileID: 8249378869966596460, guid: 13f7ad93d35503d4c8313217db6b6030, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8612641942396520276, guid: 13f7ad93d35503d4c8313217db6b6030, type: 3}
       propertyPath: smoothing
       value: 2.68
@@ -35061,6 +35093,10 @@ PrefabInstance:
       propertyPath: deformationMaterial
       value: 
       objectReference: {fileID: 2100000, guid: d8c02637f940a4d4aae6fc72f3f1d49e, type: 2}
+    - target: {fileID: 8612641942396520276, guid: 13f7ad93d35503d4c8313217db6b6030, type: 3}
+      propertyPath: deformationStrength
+      value: 0.026
+      objectReference: {fileID: 0}
     - target: {fileID: 8612641942396520276, guid: 13f7ad93d35503d4c8313217db6b6030, type: 3}
       propertyPath: accelerationSensitivity
       value: 2.65

@@ -30,6 +30,7 @@ namespace Art.Shaders
     private void Start()
     {
         rb = colliderChild.GetComponent<Rigidbody>();
+        //deformationMaterial = new Material(deformationMaterial);
     }
 
     void Update()

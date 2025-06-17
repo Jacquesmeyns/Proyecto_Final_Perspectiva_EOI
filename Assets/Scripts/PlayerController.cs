@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Art.Shaders;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour
 
     #region Material
 
+    [SerializeField] private SquashStretch squashStretch;
     private Material playerMaterial;
     [SerializeField] private float colorChangeTime = 2;
     [SerializeField] private float colorFadeTime = 1.5f;
@@ -69,16 +71,19 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        playerMaterial = GetComponent<Renderer>().material;
+        //playerMaterial = GetComponent<Renderer>().material;
+        //playerMaterial = shaderGO.GetComponent<Renderer>().material;
         healthPoints = MaxHealth;
         sphereCollider = GetComponent<SphereCollider>();
         playerInputSystem = GetComponent<PlayerInput>();
-        playerMaterial.color = Color.blue;
+        squashStretch.deformationMaterial.SetColor("_BaseColor", Color.blue);
         trailRenderer.endColor = trailRenderer.startColor = Color.blue;
     }
 
     public void ChangePlayerMaterialRed()
     {
+        ChangeMaterialAndTrailColor(Color.red);
+        /*
         DOVirtual.Color(playerMaterial.color, Color.red, colorChangeTime, (value) =>
         {
             playerMaterial.color = value;
@@ -87,10 +92,13 @@ public class PlayerController : MonoBehaviour
         {
             trailRenderer.endColor = trailRenderer.startColor = value;
         });
+        */
     }
     
     public void ChangePlayerMaterialOrange()
     {
+        ChangeMaterialAndTrailColor(new Color(1f, 0.5f, 0f));
+        /*
         DOVirtual.Color(playerMaterial.color, new Color(1f, 0.5f, 0f), colorChangeTime, (value) =>
         {
             playerMaterial.color = value;
@@ -98,16 +106,29 @@ public class PlayerController : MonoBehaviour
         DOVirtual.Color(playerMaterial.color, new Color(1f, 0.5f, 0f), colorChangeTime, (value) =>
         {
             trailRenderer.endColor = trailRenderer.startColor = value;
-        });
+        })*/
     }
     
     public void ChangePlayerMaterialBlue()
     {
-        DOVirtual.Color(playerMaterial.color, Color.blue, colorChangeTime, (value) =>
+        ChangeMaterialAndTrailColor(Color.blue);
+        /*DOVirtual.Color(playerMaterial.color, Color.blue, colorChangeTime, (value) =>
         {
             playerMaterial.color = value;
         });
         DOVirtual.Color(playerMaterial.color, Color.blue, colorChangeTime, (value) =>
+        {
+            trailRenderer.endColor = trailRenderer.startColor = value;
+        });*/
+    }
+
+    private void ChangeMaterialAndTrailColor(Color color)
+    {
+        DOVirtual.Color(squashStretch.deformationMaterial.GetColor("_BaseColor"), color, colorChangeTime, (value) =>
+        {
+            squashStretch.deformationMaterial.SetColor("_BaseColor",value);
+        });
+        DOVirtual.Color(squashStretch.deformationMaterial.GetColor("_BaseColor"), color, colorChangeTime, (value) =>
         {
             trailRenderer.endColor = trailRenderer.startColor = value;
         });
