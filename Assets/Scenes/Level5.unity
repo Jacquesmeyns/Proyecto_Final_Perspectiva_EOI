@@ -495,7 +495,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   scoreText: {fileID: 0}
-  _UIManager: {fileID: 0}
+  _UIManager: {fileID: 1523264591}
 --- !u!4 &23352388
 Transform:
   m_ObjectHideFlags: 0
@@ -24700,6 +24700,17 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &1523264591 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6072912609218579333, guid: af9e1470a62aea441923203e98343e5e, type: 3}
+  m_PrefabInstance: {fileID: 1799163308}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb9f297ee7a04cb588fac7f169c5841b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1530935071
 GameObject:
   m_ObjectHideFlags: 0

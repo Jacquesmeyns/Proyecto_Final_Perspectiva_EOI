@@ -42,14 +42,16 @@ namespace Art.Shaders
         deformationMaterial.SetFloat("_DeformationAmount", rb.linearVelocity.magnitude * deformationStrength);
         deformationMaterial.SetVector("_DeformationDirection", -rb.linearVelocity.normalized);
         
+        
+        
         // Obtener los parámetros actuales del shader
-        float deformation = isRuntime ? 
-            deformationMaterial.GetFloat("_DeformationAmount") : 
-            debugDeformation;
+        //float deformation = isRuntime ? 
+        //    deformationMaterial.GetFloat("_DeformationAmount") : 
+        //    debugDeformation;
             
-        Vector3 direction = isRuntime ?
-            deformationMaterial.GetVector("_DeformationDirection") :
-            new Vector3(debugDirectionX, debugDirectionY, debugDirectionZ);
+        //Vector3 direction = isRuntime ?
+        //    deformationMaterial.GetVector("_DeformationDirection") :
+        //    new Vector3(debugDirectionX, debugDirectionY, debugDirectionZ);
 
         // Calcular nueva escala para ambos hijos
         //Vector3 newScale = CalculateDeformedScale(deformation, direction);
@@ -60,6 +62,8 @@ namespace Art.Shaders
             
         //if(colliderChild != null) 
         //    colliderChild.localScale = newScale;
+        
+        
     }
 
     Vector3 CalculateDeformedScale(float deformation, Vector3 direction)

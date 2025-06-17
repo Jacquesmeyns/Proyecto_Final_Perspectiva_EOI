@@ -7,6 +7,8 @@ Shader "Custom/SquashStretch"
         _DeformationAmount("Deformation Amount", Range(0,1)) = 0
         _DeformationDirection("Deformation Direction", Vector) = (0,1,0,0)
         _Smoothness("Smoothness", Range(0,1)) = 0.5
+        _ShadowHardness("Shadow Hardness", Range(0,10)) = 0.5
+        _MinLight("Minimum Light", Range(0,2)) = 0.5
     }
 
     SubShader
@@ -44,10 +46,13 @@ Shader "Custom/SquashStretch"
                 float _DeformationAmount;
                 float3 _DeformationDirection;
                 float _Smoothness;
+                float _ShadowHardness;
+                float _MinLight;
             CBUFFER_END
 
             Varyings vert(Attributes IN)
             {
+                
                 Varyings OUT;
                 
                 // Deformación modificada para evitar artefactos
@@ -68,8 +73,10 @@ Shader "Custom/SquashStretch"
                 half4 color = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, IN.uv) * _BaseColor;
                 
                 // Iluminación básica URP
-                float3 lightDir = normalize(_MainLightPosition.xyz);
+                float3 lightDir = normalize(_MainLightPosition.xyz);    //Usar vector constante para que no cambie la sombra de posición
                 float NdotL = saturate(dot(IN.normalWS, lightDir));
+                NdotL = pow(NdotL, _ShadowHardness);
+                NdotL = max(NdotL, _MinLight);
                 color.rgb *= NdotL * _MainLightColor.rgb;
                 
                 color.a = 1;

@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="Deformation shader for player model created">
+    <list default="true" id="d035676a-4fc0-4fef-8ca4-ac173c7c469c" name="Changes" comment="Softened player material light">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Perspectiva Curso EOI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Shaders/Squash&amp;Stretch.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Shaders/Squash&amp;Stretch.shader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Shaders/SquashStretch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Shaders/SquashStretch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +35,11 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Art/Shaders/Squash&amp;Stretch.shader" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Art/Shaders/SquashStretch.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Art/Shaders/SquashStretch.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Fonts/hexatus/hexatus SDF.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Unity Projects/Proyecto Perspectiva Curso EOI/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hazards/DamageOnTriggerEnter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -149,15 +152,7 @@
       <workItem from="1749562510671" duration="3770000" />
       <workItem from="1749633735137" duration="4035000" />
       <workItem from="1750075570825" duration="2829000" />
-      <workItem from="1750148532569" duration="6625000" />
-    </task>
-    <task id="LOCAL-00008" summary="All VFX now working properly">
-      <option name="closed" value="true" />
-      <created>1733939219617</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1733939219617</updated>
+      <workItem from="1750148532569" duration="14479000" />
     </task>
     <task id="LOCAL-00009" summary="VFX Materials fixed.">
       <option name="closed" value="true" />
@@ -543,7 +538,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750151221443</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="New shader now changes colours accordingly to health">
+      <option name="closed" value="true" />
+      <created>1750155416402</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1750155416402</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,8 +588,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Fixed various material rendering issues" />
-    <MESSAGE value="- Level 2 creation, unfinished." />
     <MESSAGE value="- Bugfixed saw movement.&#10;- Finished level2 (lacks end point)" />
     <MESSAGE value="- Missed something from the scene (level2)" />
     <MESSAGE value="- Goal prefab created.&#10;Fixed various bugs:&#10;- Next level was not loading properly.&#10;- Player was not loading properly in next level (PlayerInput was being initialized wrong in OnEnable).&#10;- Various objects position and rotation adjusted.&#10;- Saw was rotating wrong. Also changed meshCollider for a BoxCollider." />
@@ -610,7 +611,9 @@
     <MESSAGE value="Level 5 progress" />
     <MESSAGE value="- Level 5 improvement&#10;- Spring changes" />
     <MESSAGE value="Deformation shader for player model created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deformation shader for player model created" />
+    <MESSAGE value="New shader now changes colours accordingly to health" />
+    <MESSAGE value="Softened player material light" />
+    <option name="LAST_COMMIT_MESSAGE" value="Softened player material light" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
